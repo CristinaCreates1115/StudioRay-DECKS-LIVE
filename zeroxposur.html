@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///Users/cristinamirao/Downloads/zeroxposur_growth_deck_5.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroXposur — Digital Growth Strategy | Cristina Mirao</title>
+<link href="./ZeroXposur — Digital Growth Strategy _ Cristina Mirao_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0d1f2d;--s2:#132333;--s3:#19293a;
+  --ac:#21d1b3;--ac2:#5de8d0;
+  --wh:#f0f8f6;--tx:#c8d4dc;--mu:#7a8e9c;
+  --bd:rgba(255,255,255,0.08);--bd2:rgba(255,255,255,0.05);
+  --or:#f97316;--ye:#fbbf24;--gr:#22c55e;--re:#ef4444;
+}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--tx);height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;flex-shrink:0;background:rgba(0,0,0,0.5);border-bottom:1px solid var(--bd);}
+.brand-id{display:flex;align-items:center;gap:12px;}
+.brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.15em;color:var(--ac);}
+.sep{width:1px;height:20px;background:var(--bd);}
+.doc-label{font-size:0.68rem;font-weight:600;color:var(--mu);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-pills{display:flex;gap:2px;overflow:hidden;min-width:0;flex-shrink:1;}
+.pill{border:none;background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:5px 10px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.pill:hover{color:var(--tx);background:rgba(255,255,255,0.06);}
+.pill.active{background:var(--ac);color:var(--bg);}
+.counter{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--mu);}
+.counter em{color:var(--ac);font-style:normal;font-weight:700;}
+
+/* STAGE */
+.stage{flex:1;overflow:hidden;}
+.slide{display:none;height:100%;overflow-y:auto;padding:30px 48px 24px;animation:sIn 0.3s ease both;scrollbar-width:thin;scrollbar-color:var(--bd) transparent;}
+.slide.active{display:block;}
+@keyframes sIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* SHARED */
+.ey{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:6px;}
+.h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.4vw,3rem);letter-spacing:0.07em;line-height:1;margin-bottom:8px;color:var(--wh);}
+.h1 .ac{color:var(--ac);}
+.narrative{font-size:0.86rem;color:var(--tx);line-height:1.75;margin-bottom:22px;max-width:780px;border-left:3px solid var(--bd);padding-left:16px;}
+.narrative strong{color:var(--wh);}
+.card{background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:18px 20px;}
+.card.ac{border-color:rgba(143,188,143,0.3);background:rgba(143,188,143,0.06);}
+.card.warn{border-color:rgba(212,149,106,0.3);background:rgba(212,149,106,0.05);}
+.card.impact{border-color:rgba(143,188,143,0.4);background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));margin-top:14px;}
+.lbl{font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px;color:var(--ac);}
+.lbl.o{color:var(--or);}
+.lbl.y{color:var(--ye);}
+.lbl.g{color:var(--gr);}
+.lbl.r{color:var(--re);}
+.ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.ul li{font-size:0.8rem;color:var(--tx);display:flex;gap:9px;align-items:flex-start;line-height:1.5;}
+.ul li::before{content:'→';color:var(--ac);flex-shrink:0;font-size:0.72rem;margin-top:2px;}
+.ul.warn li::before{content:'⚠';color:var(--or);font-size:0.65rem;margin-top:3px;}
+.ul.check li::before{content:'✓';color:var(--gr);}
+.ul.dot li::before{content:'✦';color:var(--ac);font-size:0.55rem;margin-top:3px;}
+.ul li strong{color:var(--wh);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+.stat{background:var(--s3);border:1px solid var(--bd2);border-radius:11px;padding:14px 12px;text-align:center;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.06em;color:var(--ac);line-height:1;}
+.stat-d{font-size:0.7rem;color:var(--mu);margin-top:3px;line-height:1.35;}
+.ch-badge{font-family:'DM Mono',monospace;font-size:0.56rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:6px;}
+.ch-badge.live{background:rgba(109,184,109,0.12);color:var(--gr);}
+.ch-badge.grow{background:rgba(201,184,112,0.12);color:var(--ye);}
+.ch-badge.new{background:rgba(212,149,106,0.12);color:var(--or);}
+.ch-badge.free{background:rgba(143,188,143,0.12);color:var(--ac);}
+.impact-bar{background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));border:1px solid rgba(143,188,143,0.35);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.impact-bar .lbl{margin-bottom:6px;}
+.impact-bar p{font-size:0.84rem;line-height:1.7;color:var(--tx);}
+.impact-bar p strong{color:var(--wh);}
+
+/* COVER */
+.cover-wrap{display:flex;flex-direction:column;justify-content:center;height:calc(100vh - 118px);gap:0;}
+.cover-pre{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;}
+.cover-brand{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,7rem);letter-spacing:0.08em;line-height:0.88;color:var(--wh);margin-bottom:6px;}
+.cover-brand span{color:var(--ac);}
+.cover-sub{font-size:1rem;font-weight:500;color:var(--mu);margin-bottom:32px;line-height:1.6;}
+.cover-divider{height:1px;background:var(--bd);margin:28px 0;}
+.cover-by{font-size:0.78rem;font-weight:600;color:var(--mu);margin-bottom:8px;letter-spacing:0.04em;}
+.cover-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:10px;}
+.cover-creds{display:flex;flex-wrap:wrap;gap:7px;}
+.cred-tag{border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:var(--mu);}
+.cred-tag.ac{border-color:rgba(143,188,143,0.4);color:var(--ac);}
+
+/* IMAGE SLOTS */
+.img-slot { border-radius:10px; overflow:hidden; aspect-ratio:4/3; }
+.img-placeholder {
+  width:100%; height:100%; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background:var(--s3); border:2px dashed var(--bd);
+  border-radius:10px; cursor:pointer; transition:all 0.2s;
+  gap:6px;
+}
+.img-placeholder:hover { border-color:var(--ac); background:rgba(143,188,143,0.06); }
+.img-plus { font-size:1.8rem; color:var(--mu); }
+.img-hint { font-size:0.72rem; color:var(--mu); font-weight:600; letter-spacing:0.04em; }
+.img-loaded { width:100%; height:100%; object-fit:cover; border-radius:10px; display:block; cursor:pointer; }
+
+/* IMAGE SLOTS */
+
+/* BOTTOMBAR */
+.bottombar{display:flex;justify-content:space-between;align-items:center;padding:0 32px;height:44px;flex-shrink:0;background:rgba(0,0,0,0.5);border-top:1px solid var(--bd);}
+.nav-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--bd);background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.nav-btn:hover{color:var(--tx);border-color:var(--ac);}
+.nav-btn.primary{background:var(--ac);color:var(--bg);border-color:var(--ac);}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed;}
+.dots{display:flex;gap:5px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.1);cursor:pointer;transition:all 0.18s;}
+.dot.active{background:var(--ac);transform:scale(1.3);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand-id">
+    <div class="brand-name">ZEROXPOSUR</div>
+    <div class="sep"></div>
+    <div class="doc-label">Digital Growth Strategy — Studio Ray</div>
+  </div>
+  <div class="nav-pills" id="pills"></div>
+  <div class="counter"><em id="cur">1</em> / <span id="tot">10</span></div>
+</div>
+
+<div class="stage">
+
+<div class="slide active">
+  <div class="cover-wrap">
+    <div class="cover-pre">Studio Ray Portfolio · Digital Growth Strategy</div>
+    <div class="cover-brand">ZERO<span>XPOSUR</span></div>
+    <div class="cover-sub">A complete e-commerce and digital brand growth strategy<br>for ZeroXposur — from audit findings to full channel expansion.</div>
+    <div class="cover-divider"></div>
+    <div class="cover-by">Prepared exclusively for Studio Ray by</div>
+    <div class="cover-name">CRISTINA MIRAO</div>
+    <div class="cover-creds">
+      <span class="cred-tag ac">E-Commerce Manager</span>
+      <span class="cred-tag ac">Digital Creative Producer</span>
+      <span class="cred-tag ac">Shopify Expert</span>
+      <span class="cred-tag ac">AI Workflow Specialist</span>
+      <span class="cred-tag">8+ Years Fashion E-Commerce</span>
+      <span class="cred-tag">12+ Marketplaces Launched</span>
+      <span class="cred-tag">TikTok Shop Operations</span>
+      <span class="cred-tag">AAFES Military Channel Experience</span>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Executive Summary</div>
+  <div class="h1">The ZeroXposur<br><span class="teal">Opportunity.</span></div>
+  <div class="narrative">ZeroXposur has everything a brand needs to win online: 30+ years of heritage, 4.5-star average ratings, strong retail distribution, and four clear seasonal pillars. <strong>What's missing is digital execution — and every gap identified here is a concrete, solvable revenue opportunity.</strong></div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-n">30+</div><div class="stat-d">Years of brand heritage — trusted by families across America since 1992</div></div>
+    <div class="stat"><div class="stat-n">4.5★</div><div class="stat-d">Average Walmart rating — 200+ reviews on fleece proves product quality</div></div>
+    <div class="stat"><div class="stat-n">4</div><div class="stat-d">Seasonal pillars — Snow, Swim, Hike, Camp — built-in commerce calendar</div></div>
+    <div class="stat"><div class="stat-n">2021</div><div class="stat-d">Last blog post — 4+ years of lost SEO traffic ready to recapture now</div></div>
+  </div>
+  <div class="two">
+    <div class="card ac"><div class="lbl">What ZeroXposur Has Going For It</div><ul class="ul check"><li>Kohl's, JCPenney, Sierra, Walmart — multi-door retail presence signals brand credibility to any new channel partner</li><li>Amazon Store active with strong customer review counts and high ratings across categories</li><li>Four distinct seasonal categories create a natural quarterly marketing and product launch calendar</li><li>Family-focused positioning with genuine warmth — identity that performs on social commerce platforms</li></ul></div>
+    <div class="card warn"><div class="lbl o">Revenue Sitting on the Table</div><ul class="ul warn"><li><strong>Instagram feed broken on homepage</strong> — "Error: No business accounts connected" is visible to every site visitor</li><li>No email capture or welcome flow — every non-converting visitor is permanently lost</li><li>Blog last updated November 2021 — 4+ years of lost organic SEO traffic</li><li>No TikTok Shop — family outdoor apparel is one of TikTok's top-performing categories</li><li>Google Shopping free listings not activated — zero-cost traffic sitting unused</li></ul></div>
+  </div>
+  <div class="impact-bar"><div class="lbl">The Core Insight</div><p>ZeroXposur's Snow, Swim, Hike, Camp pillars are not just product categories. They are a built-in email automation structure, a content calendar framework, a TikTok series concept, and an SEO keyword strategy all in one. <strong>The task is simply to activate it across every platform where the brand's audience already lives.</strong></p></div>
+</div>
+
+<div class="slide">
+  <div class="ey">Brand Audience</div>
+  <div class="h1">Who Buys<br><span class="teal">ZeroXposur.</span></div>
+  <div class="narrative">ZeroXposur's customer is distinct from both Soybu and Gerry. <strong>She is the family organizer — buying seasonal apparel for multiple kids and adults across four categories. She shops for the whole family, values proven quality over brand prestige, and returns every season when she trusts the brand.</strong></div>
+  <div style="background:linear-gradient(135deg,rgba(33,209,179,0.12),rgba(33,209,179,0.04));border:1px solid rgba(33,209,179,0.3);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:20px;margin-bottom:13px;">
+    <div style="width:56px;height:56px;border-radius:50%;background:rgba(33,209,179,0.15);border:2px solid var(--ac);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;">👩‍👧‍👦</div>
+    <div style="flex:1;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">"SARAH" — The Active Family Mom &amp; Seasonal Organizer</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Age 30–48</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">HHI $50K–$90K</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Suburban</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">2–3 Kids in Different Sizes</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Shops Kohl's &amp; Walmart</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Review-Driven &amp; Value-Conscious</span>
+      </div>
+    </div>
+  </div>
+  <div class="three" style="margin-bottom:12px;">
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">👨‍👩‍👧‍👦</div><div class="lbl">Who She Is</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Mom of 2–3 kids in different sizes. Does family shopping at Kohl's and Walmart. Buys seasonal apparel for everyone — kids need snow gear before winter, swimwear for summer, they camp every year. Budget is real but she won't sacrifice quality for her kids.</p></div>
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">🎯</div><div class="lbl">What She Wants</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">One brand covering multiple seasons and multiple family members — Snow, Swim, Hike, Camp. Easy sizing across ages. Proven quality backed by real mom reviews. Value pricing that allows outfitting the whole family. She comes back every season when she trusts the brand.</p></div>
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">🛍️</div><div class="lbl">How She Buys</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Discovers in-store at Kohl's or Walmart, or through Walmart.com seasonal searches. Reads mom blog recommendations and Facebook group suggestions. Makes most purchases during seasonal transitions. Heavily influenced by other parents' reviews — peer trust is everything.</p></div>
+  </div>
+  <div class="two">
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">Where She Discovers ZeroXposur</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">🏬 Kohl's &amp; JCP In-Store</span>
+        <span style="background:rgba(33,209,179,0.1);border:1px solid rgba(33,209,179,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">📦 Walmart.com Search</span>
+        <span style="background:rgba(66,103,178,0.1);border:1px solid rgba(66,103,178,0.25);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#6b8fd4;">👍 Facebook Mom Groups</span>
+        <span style="background:rgba(230,0,35,0.07);border:1px solid rgba(230,0,35,0.15);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#e60023;">📌 Pinterest Family Boards</span>
+        <span style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#f5a05a;">🎵 TikTok Family Creators</span>
+      </div>
+    </div>
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">What Triggers Her Purchase</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px;">
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Other moms recommending it in a Facebook group — peer trust is everything</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Strong ratings from parents mentioning fit accuracy and durability for kids</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Seeing it at Kohl's or JCP — in-store trust transfers to online repurchase</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Seasonal sale timing — she shops at seasonal transitions with buying intent</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Full Digital Audit</div>
+  <div class="h1">Where ZeroXposur<br><span class="teal">Stands Today.</span></div>
+  <div class="narrative">A full review of zeroxposur.com, Amazon, Walmart, Kohl's, and social channels. <strong>Strong retail fundamentals, but the brand's owned digital channels are years behind what its product quality and retail presence deserve.</strong></div>
+  <div class="two" style="margin-bottom:13px;">
+    <div>
+      <div class="lbl g" style="margin-bottom:10px;">✓ What's Working</div>
+      <div class="card" style="margin-bottom:10px;"><div class="lbl">Retail Distribution</div><ul class="ul check"><li>Kohl's, JCPenney, Sierra, Walmart — multi-door retail presence proves brand credibility</li><li>200+ reviews on Walmart fleece with 4.5–4.8 star ratings — product quality documented</li><li>Amazon Store active with existing brand awareness and organic search traffic</li></ul></div>
+      <div class="card" style="margin-bottom:10px;"><div class="lbl">Four Seasonal Pillars</div><ul class="ul check"><li>Snow · Swim · Hike · Camp — natural quarterly planning cycles for content, email, social</li><li>Family-focused positioning resonates deeply on Instagram, Pinterest, and Facebook</li><li>Each pillar supports its own keyword cluster and TikTok content series</li></ul></div>
+      <div class="card"><div class="lbl">Brand Identity</div><ul class="ul check"><li>Clean teal logo and consistent brand mark — distinctive and recognizable</li><li>30+ years of brand heritage and trust with the family outdoor audience</li></ul></div>
+    </div>
+    <div>
+      <div class="lbl r" style="margin-bottom:10px;">⚠ Fix These — Revenue Lost Daily</div>
+      <div class="card warn" style="margin-bottom:10px;"><div class="lbl o">Homepage Issues Found in Audit</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">The Instagram feed module on the homepage shows "Error: No business accounts connected" — visible to every visitor. No email capture. No welcome flow.</p><ul class="ul warn"><li>Broken Instagram feed — undermines social proof on the most important page</li><li>No email pop-up — zero list building from existing site traffic</li><li>Mobile navigation experience has room for improvement</li></ul></div>
+      <div class="card warn"><div class="lbl o">Content &amp; Commerce Gaps</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">Four years without blog content means ZeroXposur is invisible in organic search for seasonal queries that its products are perfectly positioned to answer.</p><ul class="ul warn"><li>Blog dark since November 2021 — significant SEO opportunity sitting untapped</li><li>Google Shopping free listings not activated — zero-cost traffic channel unused</li><li>No TikTok Shop — family outdoor is a top TikTok commerce category</li><li>No email automation — seasonal launch campaigns completely absent</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Marketplace &amp; Channel Strategy</div>
+  <div class="h1">Where ZeroXposur<br><span class="teal">Should Be Selling.</span></div>
+  <div class="narrative">ZeroXposur's family outdoor positioning opens access to channels that purely fashion or purely outdoor brands cannot access. <strong>The strategy is sequenced for maximum revenue impact with low-cost and zero-cost channels prioritized throughout.</strong></div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card" style="border-color:rgba(34,197,94,0.25);"><div class="ch-badge live">✓ Active — Upgrade</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Amazon + Kohl's + Walmart</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Active and generating revenue, but content quality needs upgrade. AI-enhanced lifestyle imagery per seasonal category, A+ brand content on Amazon, SEO-optimized titles for seasonal search terms will improve conversion without increasing ad spend.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Content upgrade — Week 1</div></div>
+    <div class="card" style="border-color:rgba(251,191,36,0.3);"><div class="ch-badge grow">↑ Priority</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">TikTok Shop</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Family outdoor apparel is TikTok's sweet spot. Creator affiliate model = zero upfront cost. Snow jackets, kids swimwear, camp gear — all perform. ZeroXposur's seasonal content maps perfectly to TikTok's top categories.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Month 1 launch</div></div>
+    <div class="card" style="border-color:rgba(33,209,179,0.2);"><div class="ch-badge free">Free Channel</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Google Shopping (Free)</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">ZX is already on Shopify — connecting Google Merchant Center activates free Shopping tab placement. "Kids ski jacket waterproof," "UPF 50 swimwear," "family hiking pants" — free organic traffic immediately.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Week 1 setup</div></div>
+    <div class="card" style="border-color:rgba(251,191,36,0.3);"><div class="ch-badge grow">↑ High Value</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Target.com</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">ZeroXposur is not on Target.com. Target's affordable family outdoor and swim category is a near-perfect brand match. Strong Kohl's presence proves the demographic fit.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Pitch Month 2</div></div>
+    <div class="card" style="border-color:rgba(249,115,22,0.3);"><div class="ch-badge new">★ Unique Fit</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">AAFES + Military Exchanges</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">33M+ eligible military shoppers, tax-free. Military families with kids are ZeroXposur's exact customer. Durable, affordable outdoor family gear across Snow, Swim, Hike, Camp = perfect Exchange fit.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Strong fit — Month 2–3</div></div>
+    <div class="card" style="border-color:rgba(249,115,22,0.3);"><div class="ch-badge new">★ Wholesale</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Faire Wholesale</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">700K+ independent retailers. Ski shops, outdoor boutiques, kids apparel shops, beach stores all source from Faire. Opens boutique distribution without sales rep overhead.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Month 2–3</div></div>
+    <div class="card" style="border-color:rgba(251,191,36,0.3);"><div class="ch-badge grow">↑ Fix + Activate</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Instagram + Facebook Shop</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Fix broken Instagram homepage feed first — then connect Shopify catalog. Every lifestyle family post becomes shoppable. Facebook family demographic aligns directly with Sarah's audience.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Fix Week 1, activate Month 1</div></div>
+    <div class="card" style="border-color:rgba(249,115,22,0.3);"><div class="ch-badge new">★ Discovery</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Pinterest Shop</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Top platform for family outdoor and seasonal apparel inspiration. Seasonal shoppable boards — Snow Looks, Swim Days, Hike Ready, Camp Essentials — drive organic discovery and purchase decisions.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Month 1</div></div>
+    <div class="card" style="border-color:rgba(33,209,179,0.2);"><div class="ch-badge free">Highest ROI</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Email Automation</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">$42 return per $1 spent. Four seasonal launch moments per year — Snow Drop, Swim Season, Hike &amp; Camp spring. Welcome series, cart recovery, post-purchase. Compounds in value as list grows.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Month 1 setup — permanent ROI</div></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">AI Creative Production</div>
+  <div class="h1">Four Seasons of Content.<br><span class="teal">One Workflow.</span></div>
+  <div class="narrative">ZeroXposur's four seasonal pillars require consistent, high-quality lifestyle imagery across Snow, Swim, Hike, and Camp. <strong>AI-powered creative production makes this achievable without four separate seasonal shoots, and accelerates time from new product to live listing from weeks to days.</strong></div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">❄️🏖️⛺🥾</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Seasonal Scene Generation</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">AI generates ski slopes, beach days, mountain trails, and campsites as lifestyle backgrounds composited with real ZeroXposur product photography. Each season gets its own visual library without separate location shoots. One core product shoot produces a full year of seasonal lifestyle content.</p></div>
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">📐</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Retailer-Compliant Image Production</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Kohl's, JCPenney, Amazon, and Walmart each require specific image formats and background specifications. My AI batch workflow takes a master image and simultaneously produces correctly formatted assets for every retailer — no separate packages per partner.</p></div>
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">🎨</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Colorway Renders &amp; Sampling Costs</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">New colorways rendered digitally before physical samples are produced. Present new ZeroXposur seasonal options to wholesale buyers earlier, test retailer interest before committing to production, and reduce the cost of sampling colorways that don't advance to full runs.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">⚡</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">10× Speed to Market</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">AI-assisted listing copy for every SKU — platform-optimized titles, bullets, descriptions. A new seasonal drop that previously took weeks to photograph, write, and upload across all channels can be live in days — ensuring ZeroXposur is in market at peak consumer demand for each season.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">📱</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">One Shoot. Every Channel.</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Every product shoot automatically reformatted: TikTok vertical, Instagram square, Pinterest tall pin, Amazon carousel, Walmart hero, email banner. The production investment in one shoot delivers assets for every active channel simultaneously.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">🤖</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">On-Site Chatbot</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">AI chatbot handles purchase-blocking questions in real time — "warmest jacket for skiing with kids?", "does this swimwear have UPF protection?", "how does sizing run?" — improving conversion rate and reducing customer service burden.</p></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">SEO, Content &amp; Social Strategy</div>
+  <div class="h1">Visible, Discoverable,<br><span class="teal">Shoppable Year-Round.</span></div>
+  <div class="narrative">Four seasonal pillars create four natural SEO keyword clusters, four social content series, and four email campaign moments every year. <strong>ZeroXposur never starts from scratch — it rotates through Snow, Swim, Hike, and Camp with fresh creative each cycle.</strong></div>
+  <div class="two" style="margin-bottom:13px;">
+    <div>
+      <div class="card" style="margin-bottom:12px;"><div class="lbl">Seasonal SEO Content Plan</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">AI-assisted blog at 2–4 posts per month, published 6 weeks before each season peak.</p><ul class="ul"><li><strong>Snow:</strong> "Best kids ski jackets 2026," "waterproof snow pants family," "winter layering guide"</li><li><strong>Swim:</strong> "UPF 50 swimwear for kids," "family beach day outfit guide," "rash guards sun protection"</li><li><strong>Hike:</strong> "Lightweight hiking pants women," "kids trail gear guide," "best family hiking clothes"</li><li><strong>Camp:</strong> "Family camping outfit checklist," "camp hoodie kids," "outdoor layering for camping"</li></ul></div>
+      <div class="card"><div class="lbl">Google Shopping + Email</div><ul class="ul"><li>Shopify → Google Merchant Center: free organic Shopping tab for all seasonal SKUs</li><li>Snow Drop alert — early access to new outerwear before the season</li><li>Swim Season kickoff — UPF swimwear and rash guard launch campaign</li><li>Hike and Camp spring collection — trail and outdoor gear for families</li><li>Abandoned cart recovery — always-on automatic revenue recapture</li></ul></div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:9px;">Social Commerce — Platform Strategy</div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(249,115,22,0.25);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(249,115,22,0.12);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(249,115,22,0.25);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">🎵</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#f5a05a;line-height:1.2;">TikTok Shop</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Priority</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Family outdoor = TikTok sweet spot · Creator affiliate = zero upfront cost · Four seasonal series</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Family ski day, swim hauls, camp gear content</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Mom lifestyle + outdoor family creator affiliates</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Snow/Swim/Hike/Camp each get own content series</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Commission-only model — no upfront ad spend</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(225,48,108,0.2);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(225,48,108,0.09);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(225,48,108,0.2);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">📸</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#e1306c;line-height:1.2;">Instagram</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Fix + Activate</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Fix broken feed week 1 · Shopify Shop catalog · Seasonal editorial grid per pillar</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Fix broken Instagram homepage feed — week 1</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Shopify catalog connected — all posts shoppable</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Snow/Swim/Hike/Camp seasonal aesthetic per pillar</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Family Reels — kids wearing gear in real settings</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(230,0,35,0.15);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(230,0,35,0.07);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(230,0,35,0.15);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">📌</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#e60023;line-height:1.2;">Pinterest</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Discover</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Family outdoor = top Pinterest category · Sarah plans purchases here · Ranks in Google</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Snow Looks, Swim Days, Hike Ready, Camp Essentials boards</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Family outfit guides per season and activity</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Ranks in Google image search — free seasonal discovery</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>AI imagery fills boards at near-zero cost</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(66,103,178,0.25);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(66,103,178,0.1);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(66,103,178,0.25);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">👍</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#6b8fd4;line-height:1.2;">Facebook</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Retarget</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Sarah lives in Facebook mom groups · Lowest CPM retargeting · Seasonal campaigns</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Facebook Shop — Shopify catalog connected</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Retargeting site visitors at lowest possible CPM</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Seasonal campaigns: Snow Drop, Swim Season launch</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Lookalike audiences from existing customer list</div></div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Execution Roadmap</div>
+  <div class="h1">The First<br><span class="teal">90 Days.</span></div>
+  <div class="narrative"><strong>Fix what's broken and activate what's free in month 1. Launch new channels in month 2. Scale and expand in month 3.</strong> Every action is specific to what the ZeroXposur audit found.</div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card"><div class="plan-lbl">Days 1–30</div><div class="plan-title">Fix, Free &amp; Fast</div><ul class="ul"><li>Fix broken Instagram feed on homepage — week one priority</li><li>Install email capture pop-up + welcome automation series</li><li>Google Shopping free listing feed connected to Shopify</li><li>Shopify site UX audit — navigation, mobile, checkout flow</li><li>AI imagery production begins for hero SKUs across all four categories</li><li>Amazon A+ content production for top sellers</li><li>All retailer content packages audited — Kohl's, JCP, Walmart compliance</li><li>TikTok Shop setup initiated</li></ul></div>
+    <div class="card"><div class="plan-lbl">Days 31–60</div><div class="plan-title">Launch &amp; Activate</div><ul class="ul"><li>TikTok Shop live — creator affiliate outreach to 15+ family outdoor creators</li><li>Instagram and Facebook Shop catalog connected</li><li>First seasonal email campaign deployed</li><li>Blog relaunched — 4 seasonal SEO posts live</li><li>Amazon A+ content live for top 20 SKUs</li><li>Pinterest Shop boards live — all four seasonal pillars</li><li>Target.com onboarding proposal submitted</li><li>AAFES military exchange outreach initiated</li></ul></div>
+    <div class="card"><div class="plan-lbl">Days 61–90</div><div class="plan-title">Scale &amp; Expand</div><ul class="ul"><li>Full AI imagery workflow operational — all seasonal assets at speed</li><li>Site chatbot live — conversion improvement and customer support</li><li>TikTok LIVE shopping events running weekly</li><li>Faire wholesale marketplace application live</li><li>All email automation flows active — welcome, seasonal, cart recovery</li><li>First performance report: channel revenue, email stats, social growth, SEO rankings</li><li>Next season assortment plan built on sell-through data</li></ul></div>
+  </div>
+  <div class="impact-bar"><div class="lbl">ZeroXposur's Built-In Advantage</div><p>Snow. Swim. Hike. Camp. <strong>These four pillars are a content calendar, an email strategy, a TikTok series, and an SEO plan all in one — already waiting to be activated.</strong> The task in Year 1 is simply to turn it on everywhere the brand's audience already lives and shops.</p></div>
+</div>
+
+<div class="slide">
+  <div class="ey">Brand Creative Showcase</div>
+  <div class="h1">ZeroXposur in<br><span class="teal">All Four Seasons.</span></div>
+  <div class="narrative">Snow. Swim. Hike. Camp. — Brand imagery, AI renders, and campaign visuals across all four seasonal pillars. <strong>Click any slot to upload your imagery.</strong></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;height:calc(100vh - 210px);">
+    <div class="img-slot" data-slot="0"><img class="img-loaded" src="zeroxposur_images/image_001.png" onclick="replaceImg(this,0)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="1"><img class="img-loaded" src="zeroxposur_images/image_002.png" onclick="replaceImg(this,1)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="2"><img class="img-loaded" src="zeroxposur_images/image_003.png" onclick="replaceImg(this,2)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="3"><img class="img-loaded" src="zeroxposur_images/image_004.png" onclick="replaceImg(this,3)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="4"><img class="img-loaded" src="zeroxposur_images/image_005.png" onclick="replaceImg(this,4)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="5"><img class="img-loaded" src="zeroxposur_images/image_006.png" onclick="replaceImg(this,5)" title="Click to replace"></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">About the Strategist</div>
+  <div class="h1">Why Cristina<br><span class="teal">Executes This.</span></div>
+  <div class="narrative">Every recommendation in this strategy comes from direct, hands-on experience — not theory. I have built marketplace operations from scratch, managed multi-brand wholesale e-commerce at scale, launched TikTok Shop, onboarded AAFES, and developed the AI creative workflows that make everything in this plan executable. <strong>I am ready to start from day one.</strong></div>
+  <div class="stat-row" style="grid-template-columns:repeat(3,1fr)!important;margin-bottom:18px;">
+    <div class="stat"><div class="stat-n">8+</div><div class="stat-d">Years in fashion e-commerce, marketplace operations and creative production</div></div>
+    <div class="stat"><div class="stat-n">12+</div><div class="stat-d">Marketplace and sales channels launched from zero across fashion and accessories</div></div>
+    <div class="stat"><div class="stat-n">10×</div><div class="stat-d">Speed improvement in listing production via proven AI workflows I built</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+    <div>
+      <div class="card ac" style="margin-bottom:12px;">
+        <div class="lbl">Professional Background</div>
+        <ul class="ul">
+          <li><strong>Magid Inc. (2020–Present):</strong> Built the entire e-commerce department from zero for a multi-brand wholesale accessories company. 8–10 brands, 500+ SKUs, 12+ channels, $150K gross in one month with zero ad spend.</li>
+          <li><strong>Area Stars (2022–Present):</strong> Shopify management, AI visual workflow development, and marketplace strategy — demonstrates I operate simultaneously across multiple brand relationships.</li>
+          <li><strong>Mystique Boutique (2017–2020):</strong> Built full Shopify operation, product photography, fulfillment, and marketing from scratch.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="lbl">Technical Skills</div>
+        <ul class="ul">
+          <li>Shopify — full platform builds, migrations, integrations, and optimization</li>
+          <li>Amazon Seller &amp; Vendor Central, Walmart, TikTok Shop, Meta Commerce, Pinterest Shop, Google Shopping</li>
+          <li>EDI, CommerceHub/Disco, Rithum, Mirakl, Shopify Marketplace Connect</li>
+          <li>Adobe Photoshop, Illustrator, Lightroom, Premiere — mastery level</li>
+          <li>AI tools: Adobe Firefly, Midjourney — proven workflows for product and lifestyle imagery</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="lbl">Education</div>
+        <ul class="ul">
+          <li><strong>BFA, Photography &amp; Related Media</strong> — Fashion Institute of Technology, New York</li>
+          <li><strong>AAS</strong> — Fashion Institute of Technology, New York</li>
+          <li>Commercial photography background informs every creative production decision and quality standard</li>
+          <li>Trilingual: English · Portuguese · Spanish — dual US/Portugal nationality</li>
+        </ul>
+      </div>
+      <div class="card ac">
+        <div class="lbl">Key Achievements</div>
+        <ul class="ul">
+          <li><strong>$150K gross sales in one month</strong> — focused SKU launch, zero ad spend</li>
+          <li><strong>$100K+ saved</strong> — custom Shopify integration architecture replacing per-channel enterprise fees</li>
+          <li>Onboarded AAFES, Nordstrom, Belk, Saks Off Fifth, Ulta, Staples from zero</li>
+          <li>Built AI creative workflow producing 10× listing speed for multi-brand wholesale operation</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:12px;text-align:center;padding:18px;">
+        <div class="lbl" style="text-align:center;margin-bottom:10px;">Contact</div>
+        <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.3rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">CRISTINA MIRAO</div>
+        <div style="font-size:0.8rem;color:var(--mu);line-height:1.8;">📞 (516) 503-1573<br>✉️ cristinadmirao@gmail.com<br>💼 linkedin.com/in/cristina-d-mirao</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- stage -->
+
+<div class="bottombar">
+  <button class="nav-btn" id="prevBtn" onclick="prev()" disabled="">← Previous</button>
+  <div class="dots" id="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+  <button class="nav-btn primary" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+<script>
+const LABELS=['Cover','Executive Summary','Customer Profile','Full Digital Audit','Channel Strategy','AI Creative','SEO & Social','90-Day Plan','Brand Gallery','About Cristina'];
+const PILLS=['Cover','Summary','Profile','Audit','Channels','AI','SEO+Social','90 Days','Gallery','About'];
+let cur=0;
+const total=LABELS.length;
+const pillRow=document.getElementById('pills');
+const dotRow=document.getElementById('dots');
+PILLS.forEach((p,i)=>{
+  const b=document.createElement('button');
+  b.className='pill'+(i===0?' active':'');
+  b.textContent=p;b.onclick=()=>goTo(i);pillRow.appendChild(b);
+  const d=document.createElement('div');
+  d.className='dot'+(i===0?' active':'');
+  d.onclick=()=>goTo(i);dotRow.appendChild(d);
+});
+document.getElementById('tot').textContent=total;
+function loadImg(input,slot){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const container=input.closest('.img-slot');
+    container.innerHTML=`<img class="img-loaded" src="${e.target.result}" onclick="replaceImg(this,${slot})" title="Click to replace">`;
+  };reader.readAsDataURL(file);
+}
+function replaceImg(img,slot){
+  const input=document.createElement('input');input.type='file';input.accept='image/*';
+  input.onchange=function(){const file=this.files[0];if(!file)return;const reader=new FileReader();reader.onload=function(e){img.src=e.target.result;};reader.readAsDataURL(file);};
+  input.click();
+}
+function goTo(n){
+  document.querySelectorAll('.slide')[cur].classList.remove('active');
+  document.querySelectorAll('.pill')[cur].classList.remove('active');
+  document.querySelectorAll('.dot')[cur].classList.remove('active');
+  cur=Math.max(0,Math.min(total-1,n));
+  document.querySelectorAll('.slide')[cur].classList.add('active');
+  document.querySelectorAll('.pill')[cur].classList.add('active');
+  document.querySelectorAll('.dot')[cur].classList.add('active');
+  document.querySelectorAll('.slide')[cur].scrollTop=0;
+  document.getElementById('cur').textContent=cur+1;
+  document.getElementById('prevBtn').disabled=cur===0;
+  const nb=document.getElementById('nextBtn');
+  nb.disabled=cur===total-1;
+  nb.textContent=cur===total-2?'Finish →':'Next →';
+}
+function next(){goTo(cur+1);}function prev(){goTo(cur-1);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')next();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')prev();
+});
+</script>
+
+</body></html>

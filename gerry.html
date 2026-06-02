@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///Users/cristinamirao/Downloads/gerry_growth_deck_9.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerry — Digital Growth Strategy | Cristina Mirao</title>
+<link href="./Gerry — Digital Growth Strategy _ Cristina Mirao_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0f1a12;--s2:#162019;--s3:#1e2b20;
+  --ac:#e8832a;--ac2:#f0a85a;
+  --wh:#f5f0eb;--tx:#d4cdc5;--mu:#8a7a6a;
+  --bd:rgba(232,131,42,0.15);--bd2:rgba(232,131,42,0.08);
+  --or:#e8832a;--ye:#f0c050;--gr:#7ab87a;--re:#c97070;
+}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--tx);height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;flex-shrink:0;background:rgba(0,0,0,0.5);border-bottom:1px solid var(--bd);}
+.brand-id{display:flex;align-items:center;gap:12px;}
+.brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.15em;color:var(--ac);}
+.sep{width:1px;height:20px;background:var(--bd);}
+.doc-label{font-size:0.68rem;font-weight:600;color:var(--mu);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-pills{display:flex;gap:2px;overflow:hidden;min-width:0;flex-shrink:1;}
+.pill{border:none;background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:5px 10px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.pill:hover{color:var(--tx);background:rgba(255,255,255,0.06);}
+.pill.active{background:var(--ac);color:var(--bg);}
+.counter{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--mu);}
+.counter em{color:var(--ac);font-style:normal;font-weight:700;}
+
+/* STAGE */
+.stage{flex:1;overflow:hidden;}
+.slide{display:none;height:100%;overflow-y:auto;padding:30px 48px 24px;animation:sIn 0.3s ease both;scrollbar-width:thin;scrollbar-color:var(--bd) transparent;}
+.slide.active{display:block;}
+@keyframes sIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* SHARED */
+.ey{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:6px;}
+.h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.4vw,3rem);letter-spacing:0.07em;line-height:1;margin-bottom:8px;color:var(--wh);}
+.h1 .ac{color:var(--ac);}
+.narrative{font-size:0.86rem;color:var(--tx);line-height:1.75;margin-bottom:22px;max-width:780px;border-left:3px solid var(--bd);padding-left:16px;}
+.narrative strong{color:var(--wh);}
+.card{background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:18px 20px;}
+.card.ac{border-color:rgba(143,188,143,0.3);background:rgba(143,188,143,0.06);}
+.card.warn{border-color:rgba(212,149,106,0.3);background:rgba(212,149,106,0.05);}
+.card.impact{border-color:rgba(143,188,143,0.4);background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));margin-top:14px;}
+.lbl{font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px;color:var(--ac);}
+.lbl.o{color:var(--or);}
+.lbl.y{color:var(--ye);}
+.lbl.g{color:var(--gr);}
+.lbl.r{color:var(--re);}
+.ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.ul li{font-size:0.8rem;color:var(--tx);display:flex;gap:9px;align-items:flex-start;line-height:1.5;}
+.ul li::before{content:'→';color:var(--ac);flex-shrink:0;font-size:0.72rem;margin-top:2px;}
+.ul.warn li::before{content:'⚠';color:var(--or);font-size:0.65rem;margin-top:3px;}
+.ul.check li::before{content:'✓';color:var(--gr);}
+.ul.dot li::before{content:'✦';color:var(--ac);font-size:0.55rem;margin-top:3px;}
+.ul li strong{color:var(--wh);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+.stat{background:var(--s3);border:1px solid var(--bd2);border-radius:11px;padding:14px 12px;text-align:center;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.06em;color:var(--ac);line-height:1;}
+.stat-d{font-size:0.7rem;color:var(--mu);margin-top:3px;line-height:1.35;}
+.ch-badge{font-family:'DM Mono',monospace;font-size:0.56rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:6px;}
+.ch-badge.live{background:rgba(109,184,109,0.12);color:var(--gr);}
+.ch-badge.grow{background:rgba(201,184,112,0.12);color:var(--ye);}
+.ch-badge.new{background:rgba(212,149,106,0.12);color:var(--or);}
+.ch-badge.free{background:rgba(143,188,143,0.12);color:var(--ac);}
+.impact-bar{background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));border:1px solid rgba(143,188,143,0.35);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.impact-bar .lbl{margin-bottom:6px;}
+.impact-bar p{font-size:0.84rem;line-height:1.7;color:var(--tx);}
+.impact-bar p strong{color:var(--wh);}
+
+/* COVER */
+.cover-wrap{display:flex;flex-direction:column;justify-content:center;height:calc(100vh - 118px);gap:0;}
+.cover-pre{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;}
+.cover-brand{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,7rem);letter-spacing:0.08em;line-height:0.88;color:var(--wh);margin-bottom:6px;}
+.cover-brand span{color:var(--ac);}
+.cover-sub{font-size:1rem;font-weight:500;color:var(--mu);margin-bottom:32px;line-height:1.6;}
+.cover-divider{height:1px;background:var(--bd);margin:28px 0;}
+.cover-by{font-size:0.78rem;font-weight:600;color:var(--mu);margin-bottom:8px;letter-spacing:0.04em;}
+.cover-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:10px;}
+.cover-creds{display:flex;flex-wrap:wrap;gap:7px;}
+.cred-tag{border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:var(--mu);}
+.cred-tag.ac{border-color:rgba(143,188,143,0.4);color:var(--ac);}
+
+/* IMAGE SLOTS */
+.img-slot { border-radius:10px; overflow:hidden; aspect-ratio:4/3; }
+.img-placeholder {
+  width:100%; height:100%; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background:var(--s3); border:2px dashed var(--bd);
+  border-radius:10px; cursor:pointer; transition:all 0.2s;
+  gap:6px;
+}
+.img-placeholder:hover { border-color:var(--ac); background:rgba(143,188,143,0.06); }
+.img-plus { font-size:1.8rem; color:var(--mu); }
+.img-hint { font-size:0.72rem; color:var(--mu); font-weight:600; letter-spacing:0.04em; }
+.img-loaded { width:100%; height:100%; object-fit:cover; border-radius:10px; display:block; cursor:pointer; }
+
+/* IMAGE SLOTS */
+
+/* BOTTOMBAR */
+.bottombar{display:flex;justify-content:space-between;align-items:center;padding:0 32px;height:44px;flex-shrink:0;background:rgba(0,0,0,0.5);border-top:1px solid var(--bd);}
+.nav-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--bd);background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.nav-btn:hover{color:var(--tx);border-color:var(--ac);}
+.nav-btn.primary{background:var(--ac);color:var(--bg);border-color:var(--ac);}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed;}
+.dots{display:flex;gap:5px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.1);cursor:pointer;transition:all 0.18s;}
+.dot.active{background:var(--ac);transform:scale(1.3);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand-id">
+    <div class="brand-name">GERRY</div>
+    <div class="sep"></div>
+    <div class="doc-label">Digital Growth Strategy — Studio Ray</div>
+  </div>
+  <div class="nav-pills" id="pills"></div>
+  <div class="counter"><em id="cur">1</em> / <span id="tot">11</span></div>
+</div>
+
+<div class="stage">
+
+<div class="slide active">
+  <div class="cover-wrap">
+    <div class="cover-pre">Studio Ray Portfolio · Digital Growth Strategy</div>
+    <div class="cover-brand">GER<span>RY</span></div>
+    <div class="cover-sub">A complete e-commerce and digital brand growth strategy<br>for Gerry — from platform migration to full channel expansion.</div>
+    <div class="cover-divider"></div>
+    <div class="cover-by">Prepared exclusively for Studio Ray by</div>
+    <div class="cover-name">CRISTINA MIRAO</div>
+    <div class="cover-creds">
+      <span class="cred-tag ac">E-Commerce Manager</span>
+      <span class="cred-tag ac">Digital Creative Producer</span>
+      <span class="cred-tag ac">Shopify Expert</span>
+      <span class="cred-tag ac">AI Workflow Specialist</span>
+      <span class="cred-tag">8+ Years Fashion E-Commerce</span>
+      <span class="cred-tag">12+ Marketplaces Launched</span>
+      <span class="cred-tag">FIT — BFA Photography</span>
+      <span class="cred-tag">Wholesale Brand Experience</span>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Executive Summary</div>
+  <div class="h1">The Gerry<br><span class="teal">Opportunity.</span></div>
+  <div class="narrative">Gerry is a 78-year outdoor brand with a Wikipedia page, Costco distribution, and Amazon presence — but its website is a WordPress brochure that redirects every customer to Amazon. <strong>There is no DTC revenue, no email list, no social commerce, and no Shopify infrastructure. The brand equity is extraordinary. The digital execution is essentially zero. That gap is the entire opportunity.</strong></div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-n">1946</div><div class="stat-d">Founded by a 10th Mountain Division veteran — 78 years of outdoor heritage</div></div>
+    <div class="stat"><div class="stat-n">$0</div><div class="stat-d">Current DTC revenue — no Shopify, no direct selling, no owned customer relationship</div></div>
+    <div class="stat"><div class="stat-n">0</div><div class="stat-d">Email subscribers — no capture mechanism exists anywhere on the current site</div></div>
+    <div class="stat"><div class="stat-n">Priority 1</div><div class="stat-d">Shopify migration unlocks everything — the foundation must come first</div></div>
+  </div>
+  <div class="two">
+    <div class="card ac">
+      <div class="lbl">What Gerry Has — Brand Equity No Competitor Can Buy</div>
+      <ul class="ul check">
+        <li>78-year heritage — Gerry Cunningham invented the modern carabiner in 1950, founded by a WWII veteran</li>
+        <li>Wikipedia page — genuine brand authority signal that most brands never achieve</li>
+        <li>Costco seasonal placement — proves product quality at mass retail volume and price point</li>
+        <li>Amazon Store and Walmart Marketplace already active with customer reviews</li>
+        <li>Full range: jackets, pants, shorts, vests, sweaters, shoes, kids line — complete outdoor family assortment</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <div class="lbl o">What Is Missing — The Entire Digital Presence</div>
+      <ul class="ul warn">
+        <li><strong>gerryclothing.com is WordPress with zero e-commerce capability</strong> — every buy button sends customers to Amazon, ceding the customer relationship entirely</li>
+        <li>No email list — the brand has no way to communicate directly with customers</li>
+        <li>No TikTok Shop, no Instagram Shop, no Pinterest — social commerce entirely absent</li>
+        <li>Website counters show 0+ for all metrics — site appears unmaintained and undermines trust</li>
+      </ul>
+    </div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">The Business Case</div>
+    <p>Every customer who buys Gerry on Amazon is Amazon's customer — not Studio Ray's. <strong>A Shopify store changes this completely</strong>, turning every sale into a permanent business asset: an email address, a purchase history, a relationship that compounds in value over time.</p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Brand Audience</div>
+  <div class="h1">Who Buys<br><span class="teal">Gerry.</span></div>
+  <div class="narrative">Gerry's customer is fundamentally different from a fashion or wellness buyer. <strong>He is a practical, heritage-trusting, value-conscious outdoor dad who makes purchasing decisions based on durability, performance specs, and proven brand reputation — not trends.</strong></div>
+  <div style="background:linear-gradient(135deg,rgba(232,131,42,0.15),rgba(232,131,42,0.04));border:1px solid rgba(232,131,42,0.3);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:20px;margin-bottom:13px;">
+    <div style="width:56px;height:56px;border-radius:50%;background:rgba(232,131,42,0.2);border:2px solid var(--ac);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;">🏕️</div>
+    <div style="flex:1;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">"MARK" — The Outdoor Family Dad &amp; Heritage Brand Loyalist</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Age 35–55</span>
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">HHI $60K–$110K</span>
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Suburban &amp; Rural</span>
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Family of 3–5</span>
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Shops Costco &amp; Walmart</span>
+        <span style="background:rgba(232,131,42,0.12);border:1px solid rgba(232,131,42,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Durability-Driven Buyer</span>
+      </div>
+    </div>
+  </div>
+  <div class="three" style="margin-bottom:12px;">
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">🏔️</div><div class="lbl">Who He Is</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Coaches the kids soccer team. Plans family camping trips every summer. Shops at Costco and Walmart. Values practicality over trend — has been buying the same brand of jacket for years because it works. Outfitting a family of 4+ means price-per-use matters more than price alone.</p></div>
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">⚙️</div><div class="lbl">What He Wants</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Gear that lasts multiple seasons and can be handed down. Performance specs he can justify — waterproof rating, UPF number, stretch percentage. Sizing that covers the whole family. He trusts brands that have been around long enough to prove themselves.</p></div>
+    <div class="card"><div style="font-size:1.1rem;margin-bottom:7px;">🧾</div><div class="lbl">How He Buys</div><p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Discovers on the Costco floor or Walmart endcap. Reads Amazon reviews heavily before ordering online. Watches YouTube gear review content. Responds to Facebook ads for family outdoor brands. Does not impulse-buy fashion — but will stock up on trusted performance gear at a good price.</p></div>
+  </div>
+  <div class="two">
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">Where He Discovers Gerry</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
+        <span style="background:rgba(232,131,42,0.1);border:1px solid rgba(232,131,42,0.25);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">🏬 Costco Floor</span>
+        <span style="background:rgba(232,131,42,0.1);border:1px solid rgba(232,131,42,0.25);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">📦 Amazon Search</span>
+        <span style="background:rgba(66,103,178,0.1);border:1px solid rgba(66,103,178,0.25);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#6b8fd4;">👍 Facebook Family Groups</span>
+        <span style="background:rgba(255,0,0,0.07);border:1px solid rgba(255,0,0,0.15);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#ff6060;">▶️ YouTube Gear Reviews</span>
+        <span style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#f5a05a;">🎵 TikTok Outdoor Creators</span>
+      </div>
+    </div>
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">What Triggers His Purchase</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px;">
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Sees it at Costco or Walmart at the right price — trust + value in one moment</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>100+ Amazon reviews mentioning durability and warmth specifically</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>Technical spec callouts: waterproof rating, UPF 40+, fill weight</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>"Founded by a WWII veteran in 1946" — heritage builds instant trust</div>
+      </div>
+    </div>
+  </div>
+  <div class="impact-bar" style="margin-top:12px;">
+    <div class="lbl">The Gerry Customer Insight</div>
+    <p>Mark is not buying fashion. He is buying <strong>trusted performance gear for his family at a price that makes sense.</strong> Gerry's 78-year heritage and technical credentials are the exact trust signals this buyer responds to.</p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Full Digital Audit</div>
+  <div class="h1">Where Gerry<br><span class="teal">Stands Today.</span></div>
+  <div class="narrative">A full review of gerryclothing.com, Amazon, Walmart, and social channels. <strong>The finding is consistent: tremendous brand equity with almost no digital infrastructure to support it. Every gap is a buildable opportunity.</strong></div>
+  <div class="two" style="margin-bottom:13px;">
+    <div>
+      <div class="lbl g" style="margin-bottom:10px;">✓ What's Working</div>
+      <div class="card" style="margin-bottom:10px;"><div class="lbl">Heritage Story &amp; Authority</div><ul class="ul check"><li>78-year brand history — founder invented the modern carabiner in 1950</li><li>Wikipedia page exists — strong brand authority signal</li><li>Costco seasonal placement — mass retail proof of product quality</li></ul></div>
+      <div class="card" style="margin-bottom:10px;"><div class="lbl">Retail &amp; Marketplace Presence</div><ul class="ul check"><li>Amazon Store active with product listings and customer reviews</li><li>Walmart Marketplace listings live — GerryKids prominently featured</li><li>Historical placement at Macy's, Dillard's, Sports Authority</li></ul></div>
+      <div class="card"><div class="lbl">Product Range</div><ul class="ul check"><li>Jackets, pants, shorts, vests, sweaters, shoes — full outdoor family range</li><li>UPF sun protection, quick-dry, waterproof — strong performance story</li><li>GerryKids line extends brand to family purchasing decisions</li></ul></div>
+    </div>
+    <div>
+      <div class="lbl r" style="margin-bottom:10px;">⚠ Fix These Now</div>
+      <div class="card warn" style="margin-bottom:10px;"><div class="lbl o">Website Is Not E-Commerce</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">gerryclothing.com is WordPress with no shopping cart. Every buy button is an Amazon affiliate link. Zero DTC revenue. Zero email capture. Zero customer data collection.</p><ul class="ul warn"><li>No Shopify or any DTC platform — entire direct revenue channel missing</li><li>Website counters show 0+ for all metrics — undermines brand credibility</li></ul></div>
+      <div class="card warn"><div class="lbl o">Social Commerce Absent</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">Outdoor gear and family adventure content are among TikTok's fastest growing categories. Gerry has none of these channels active for commerce.</p><ul class="ul warn"><li>No TikTok Shop — outdoor adventure is a top-performing TikTok category</li><li>No Instagram or Facebook Shop connected</li><li>No Pinterest presence for family outdoor inspiration</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Foundation — Priority One</div>
+  <div class="h1">Migration to Shopify:<br><span class="teal">Building the Platform.</span></div>
+  <div class="narrative">Everything in this growth strategy depends on one foundational decision: moving Gerry from a WordPress brochure to a full Shopify e-commerce platform. <strong>Shopify is the hub that connects every marketplace, email tool, social commerce channel, and analytics platform this strategy requires.</strong></div>
+  <div class="two" style="margin-bottom:13px;">
+    <div>
+      <div class="card ac" style="margin-bottom:12px;"><div class="lbl">Why Shopify Changes Everything</div><ul class="ul"><li><strong>DTC revenue from day one:</strong> Customers buy directly — the sale goes to Studio Ray, not Amazon. Higher margins, owned customer relationship, owned data.</li><li><strong>Email capture from every visitor:</strong> Every site visitor can be asked for their email — a permanently owned business asset that compounds with every campaign.</li><li><strong>Single integration hub:</strong> Amazon, Walmart, TikTok Shop, Google Shopping, Facebook, Instagram — all connect through pre-built Shopify apps in hours, not weeks.</li><li><strong>Inventory sync across all channels:</strong> One source of truth prevents overselling and enables accurate multi-channel operations.</li></ul></div>
+      <div class="card"><div class="lbl">Migration Plan — Month 1</div><ul class="ul"><li><strong>Week 1:</strong> Shopify store setup — brand theme, heritage design, navigation</li><li><strong>Week 2:</strong> Full catalog migration — all SKUs, imagery, descriptions transferred</li><li><strong>Week 3:</strong> Payment, shipping, and fulfillment configuration — ready for first sale</li><li><strong>Week 4:</strong> SEO migration — WordPress URLs redirected, rankings preserved</li><li><strong>Month 2:</strong> All marketplace integrations connected through Shopify hub</li></ul></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px;"><div class="lbl">Site Design Vision</div><ul class="ul"><li>Heritage-forward: 1946 founding story and Gerry Cunningham legacy front and center</li><li>Deep forest green, warm amber, clean typography — rugged outdoor energy</li><li>Category pages: Jackets · Pants · Shorts · Sun Protection · Kids — clean seasonal navigation</li><li>Performance spec callouts per product: UPF rating, water resistance, stretch — outdoor shoppers buy on specs</li><li>Seasonal collections: Snow Season · Summer Adventure · Spring Trail · Family Camp</li></ul></div>
+      <div class="card ac"><div class="lbl">What Stays the Same</div><ul class="ul"><li>Amazon and Walmart listings remain active — Shopify adds a new channel, not replaces</li><li>Costco wholesale relationship completely unaffected — wholesale stays separate</li><li>Brand identity, product range, and pricing architecture unchanged — infrastructure upgrade only</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Marketplace &amp; Channel Strategy</div>
+  <div class="h1">Every Channel<br><span class="teal">Gerry Should Own.</span></div>
+  <div class="narrative">Once Shopify is the foundation, every channel below connects through it — each new launch faster and cheaper than building separately. <strong>Gerry's heritage story gives it a content advantage that purely functional outdoor brands cannot match.</strong></div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card" style="border-color:rgba(122,184,122,0.25);"><div class="ch-badge live">✓ Active — Optimize</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Amazon</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">A+ content with heritage story, enhanced lifestyle imagery, SEO-optimized titles for outdoor search terms: "men's hiking jacket," "UPF 40 sun shirt," "waterproof outdoor pants."</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">A+ content + SEO overhaul — Week 1</div></div>
+    <div class="card" style="border-color:rgba(122,184,122,0.25);"><div class="ch-badge live">✓ Active — Optimize</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Walmart Marketplace</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Content upgrade — better imagery, SEO descriptions, full assortment. GerryKids line prominent. Walmart outdoor category is growing fast.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Content upgrade — Month 1</div></div>
+    <div class="card" style="border-color:rgba(232,131,42,0.2);"><div class="ch-badge free">Free Channel</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Google Shopping (Free)</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Connect Shopify → Google Merchant Center. Free organic placement for "hiking jacket men," "waterproof outdoor pants," "kids UPF sun shirt." Zero cost per click.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Day 1 of Shopify launch</div></div>
+    <div class="card" style="border-color:rgba(240,192,80,0.3);"><div class="ch-badge grow">↑ Launch Now</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">TikTok Shop</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Outdoor gear and family adventure are TikTok's fastest growing categories. Gerry's 1946 heritage story is extraordinary creator content. Creator affiliate model = zero ad spend.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Priority launch post-Shopify</div></div>
+    <div class="card" style="border-color:rgba(240,192,80,0.3);"><div class="ch-badge grow">↑ High Value</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Target.com</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Gerry is not on Target.com. Target's outdoor family apparel category is booming and the brand's Costco and Walmart presence proves it performs at mass price points.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Pitch Month 2–3</div></div>
+    <div class="card" style="border-color:rgba(232,131,42,0.3);"><div class="ch-badge new">★ Unique Fit</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">AAFES Military Exchanges</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">33M+ eligible military shoppers. A brand founded by a 10th Mountain Division veteran is a genuine fit — not just a commercial pitch. AAFES, MCX, NEX actively add new brands.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Heritage connection — Month 2</div></div>
+    <div class="card" style="border-color:rgba(232,131,42,0.3);"><div class="ch-badge new">★ Premium</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">REI Co-op Marketplace</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">REI reaches the most dedicated outdoor consumers in America. Gerry's heritage and performance specs align with REI customer values. High average order value channel.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Explore Month 3+</div></div>
+    <div class="card" style="border-color:rgba(232,131,42,0.3);"><div class="ch-badge new">★ Wholesale</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Faire Wholesale</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">700K+ independent retailers. Ski shops, outdoor boutiques, camping stores all source from Faire. Gerry's name recognition opens doors that newer brands cannot access.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">B2B expansion Month 2–3</div></div>
+    <div class="card" style="border-color:rgba(240,192,80,0.3);"><div class="ch-badge grow">↑ Activate</div><div style="font-weight:800;font-size:0.86rem;color:var(--wh);margin-bottom:5px;">Instagram + Facebook Shop</div><p style="font-size:0.76rem;color:var(--mu);line-height:1.5;margin-bottom:7px;">Family outdoor adventure content performs strongly on both. Connect Shopify catalog to make every lifestyle post shoppable. Facebook's family demographic aligns directly with Gerry's audience.</p><div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Connect at Shopify launch</div></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">AI Creative Production</div>
+  <div class="h1">The Heritage Story<br><span class="teal">Told at Scale.</span></div>
+  <div class="narrative">Gerry's brand story — 78 years, a war veteran founder, the invention of the carabiner — is extraordinary content that demands extraordinary visuals. <strong>AI-powered creative workflows allow Gerry to produce professional outdoor lifestyle imagery and heritage storytelling at a fraction of traditional production cost.</strong></div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">🏔️</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Outdoor Lifestyle Scenes</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Mountain trails, ski slopes, camping grounds, family adventures — AI generates seasonal lifestyle scenes composited with real product photography. Eliminates costly location shoots while producing imagery that communicates the brand experience authentically.</p></div>
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">🎖️</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Heritage Brand Storytelling</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">AI-produced timeline graphics, founder story cards, and "78 years of outdoor innovation" content pieces build the emotional connection only Gerry's heritage can enable. Content no competitor can replicate because only Gerry has this story.</p></div>
+    <div class="card ac"><div style="font-size:1.3rem;margin-bottom:8px;">📐</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Vendor-Compliant Assets</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Amazon, Walmart, Target, Costco each have specific image requirements. My AI batch workflow produces correctly formatted, compliant images for every vendor from a single master shoot — eliminating separate asset packages per retailer.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">🎨</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">Wholesale Sample Replacement</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Before physical samples are produced, AI renders show buyers every colorway and style variation at full professional quality. Present new collections to buyers earlier, test interest before committing to production runs, reduce unnecessary sample costs.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">👨‍👩‍👧</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">GerryKids Family Content</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">AI-generated family outdoor scenes featuring children in GerryKids gear targets the parent purchasing audience on Pinterest, Facebook, and Instagram. Family adventure content is one of the highest-performing categories — no additional production investment needed.</p></div>
+    <div class="card"><div style="font-size:1.3rem;margin-bottom:8px;">⚡</div><div style="font-weight:800;font-size:0.84rem;color:var(--wh);margin-bottom:7px;">10× Production Speed</div><p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">A full seasonal product catalog that traditionally takes weeks can be produced in days using my AI workflow. New collections go to market ahead of the season — at the moment of consumer demand, not after it peaks.</p></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">SEO, Content &amp; Social Strategy</div>
+  <div class="h1">Discovery, Community<br><span class="teal">and Conversion.</span></div>
+  <div class="narrative">A 78-year brand founded by a war veteran should rank for outdoor apparel searches and dominate heritage content on social. <strong>The strategy below builds permanent organic visibility that does not depend on paid advertising to maintain.</strong></div>
+  <div class="two" style="margin-bottom:13px;">
+    <div>
+      <div class="card" style="margin-bottom:12px;"><div class="lbl">Heritage SEO Content</div><p style="font-size:0.79rem;color:var(--tx);line-height:1.65;margin-bottom:8px;">AI-assisted blog at 2 posts per month, built around outdoor seasonal search trends and the brand's remarkable heritage story.</p><ul class="ul"><li>"Best men's hiking jacket 2026" — highest-volume outdoor apparel search term</li><li>"Gerry Clothing: 78 years of outdoor innovation" — brand authority content</li><li>"UPF 40 outdoor shirts: performance guide" — educates and converts</li><li>"Family camping gear checklist" — targets the GerryKids family audience</li></ul></div>
+      <div class="card"><div class="lbl">Google Shopping + Email</div><ul class="ul"><li>Shopify → Google Merchant Center: free organic Shopping tab placement for all SKUs</li><li>Welcome series: Gerry heritage story — sets brand narrative from first contact</li><li>Seasonal launches: Snow Season, Summer Adventure, Spring Trail, GerryKids back-to-school</li><li>Abandoned cart recovery — automatic, always-on revenue recapture</li></ul></div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:9px;">Social Commerce — Platform Strategy</div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(249,115,22,0.25);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(249,115,22,0.12);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(249,115,22,0.25);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">🎵</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#f5a05a;line-height:1.2;">TikTok Shop</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Priority</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Outdoor &amp; family = TikTok fastest growing category · Creator affiliate = zero ad spend</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Heritage Outdoors series — brand story, gear demos, family adventure</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Creator affiliates: hiking, camping, ski community accounts</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>1946 founder story — extraordinary content no competitor has</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>GerryKids family content — high engagement with parent audience</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(225,48,108,0.2);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(225,48,108,0.09);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(225,48,108,0.2);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">📸</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#e1306c;line-height:1.2;">Instagram</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Convert</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">2B+ MAU · Shoppable posts via Instagram Shop · Editorial outdoor lifestyle</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Instagram Shop catalog — every post shoppable from day one</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Trails, mountain peaks, family camps — consistent outdoor aesthetic</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Heritage founder story content — drives organic engagement</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Reels: product demos, outdoor adventures, brand story cuts</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(255,0,0,0.15);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(255,0,0,0.07);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,0,0,0.15);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">▶️</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#ff6060;line-height:1.2;">YouTube</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Authority</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">"Adventure with Gerry" series · Long-form ranks in Google video search · Mark watches YouTube</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Seasonal gear guides: Snow prep, Summer hike, Camp essentials</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Family outdoor vlogs — real usage by real families</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Repurpose as TikTok + Instagram Reels cuts</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Drives trust with Mark — he watches YouTube before buying</div></div>
+    </div>
+  </div>
+        <div style="display:flex;border-radius:11px;overflow:hidden;border:1px solid rgba(230,0,35,0.15);background:var(--s3);">
+    <div style="width:155px;flex-shrink:0;background:rgba(230,0,35,0.07);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(230,0,35,0.15);">
+      <div style="font-size:1.1rem;margin-bottom:3px;">📌</div>
+      <div style="font-weight:800;font-size:0.82rem;color:#e60023;line-height:1.2;">Pinterest</div>
+      <div style="font-size:0.6rem;color:var(--mu);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Discover</div>
+    </div>
+    <div style="flex:1;padding:10px 14px;min-width:0;">
+      <div style="font-size:0.63rem;color:var(--mu);margin-bottom:6px;">Family outdoor inspiration #1 on Pinterest · Boards rank in Google · Free organic reach</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;"><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Snow Ready, Summer Hike, Family Camp, Beach Day boards</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>GerryKids family outfit guides per season</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>Ranks in Google image search — free seasonal + gift discovery</div><div style="font-size:0.76rem;color:var(--tx);display:flex;gap:5px;"><span style="color:var(--ac);flex-shrink:0;">✦</span>AI outdoor scene imagery fills boards at near-zero cost</div></div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Execution Roadmap</div>
+  <div class="h1">The First<br><span class="teal">90 Days.</span></div>
+  <div class="narrative">Sequenced around one principle: <strong>build the foundation first, then build everything else on top of it.</strong> The Shopify migration is the unlock — once live, the pace of channel expansion accelerates significantly.</div>
+  <div class="three" style="margin-bottom:13px;">
+    <div class="card"><div class="plan-lbl">Days 1–30</div><div class="plan-title">Build the Foundation</div><ul class="ul"><li>Shopify store build begins — brand theme, navigation, heritage visual design</li><li>Full product catalog migrated from WordPress</li><li>WordPress URLs properly redirected — preserve any existing rankings</li><li>AI imagery production begins for hero SKUs across all categories</li><li>Amazon listing SEO overhaul initiated — A+ content production begins</li><li>Walmart listing content upgrade — improved imagery and descriptions</li><li>TikTok account created and content strategy planned around heritage story</li></ul></div>
+    <div class="card"><div class="plan-lbl">Days 31–60</div><div class="plan-title">Launch &amp; Connect</div><ul class="ul"><li>Shopify store goes live — first DTC revenue channel in Gerry's history</li><li>Google Shopping free feed connected from day one of launch</li><li>Email capture active — list building begins immediately</li><li>Instagram and Facebook Shop connected to Shopify catalog</li><li>TikTok Shop setup + first creator affiliate outreach</li><li>Welcome email series live with Gerry heritage story</li><li>Blog launched — 4 heritage and outdoor SEO posts live</li><li>AAFES military exchange onboarding proposal submitted</li></ul></div>
+    <div class="card"><div class="plan-lbl">Days 61–90</div><div class="plan-title">Scale &amp; Report</div><ul class="ul"><li>TikTok LIVE outdoor gear events running on regular schedule</li><li>Full AI imagery workflow operational — seasonal assets at speed</li><li>Site chatbot live — product recommendations and customer support</li><li>Target.com pitch submitted</li><li>Pinterest shop boards live — all seasonal outdoor collections</li><li>Faire wholesale marketplace application live</li><li>First performance report: DTC revenue, marketplace growth, email list, SEO rankings</li></ul></div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">The Gerry Advantage That Money Cannot Buy</div>
+    <p><strong>78 years. A war veteran founder. The invention of the modern carabiner. A Wikipedia article.</strong> Gerry has a brand story that most outdoor companies would pay millions to manufacture. It already exists — it just needs to be told in the right places, to the right audiences, at the right scale.</p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">Brand Creative Showcase</div>
+  <div class="h1">Gerry in<br><span class="teal">Motion.</span></div>
+  <div class="narrative">Product imagery, lifestyle photography, AI renders, and campaign visuals that bring Gerry's outdoor heritage to life. <strong>Click any slot to upload your imagery.</strong></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;height:calc(100vh - 210px);">
+    <div class="img-slot" data-slot="0"><img class="img-loaded" src="gerry_images/image_001.png" onclick="replaceImg(this,0)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="1"><img class="img-loaded" src="gerry_images/image_002.png" onclick="replaceImg(this,1)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="2"><img class="img-loaded" src="gerry_images/image_003.png" onclick="replaceImg(this,2)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="3"><img class="img-loaded" src="gerry_images/image_004.png" onclick="replaceImg(this,3)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="4"><img class="img-loaded" src="gerry_images/image_005.png" onclick="replaceImg(this,4)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="5"><img class="img-loaded" src="gerry_images/image_006.png" onclick="replaceImg(this,5)" title="Click to replace"></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="ey">About the Strategist</div>
+  <div class="h1">Why Cristina<br><span class="teal">Executes This.</span></div>
+  <div class="narrative">Every recommendation in this strategy comes from direct, hands-on experience — not theory. I have built marketplace operations from scratch, managed multi-brand wholesale e-commerce at scale, launched TikTok Shop, onboarded AAFES, and developed the AI creative workflows that make everything in this plan executable. <strong>I am ready to start from day one.</strong></div>
+  <div class="stat-row" style="grid-template-columns:repeat(3,1fr)!important;margin-bottom:18px;">
+    <div class="stat"><div class="stat-n">8+</div><div class="stat-d">Years in fashion e-commerce, marketplace operations and creative production</div></div>
+    <div class="stat"><div class="stat-n">12+</div><div class="stat-d">Marketplace and sales channels launched from zero across fashion and accessories</div></div>
+    <div class="stat"><div class="stat-n">10×</div><div class="stat-d">Speed improvement in listing production via proven AI workflows I built</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+    <div>
+      <div class="card ac" style="margin-bottom:12px;">
+        <div class="lbl">Professional Background</div>
+        <ul class="ul">
+          <li><strong>Magid Inc. (2020–Present):</strong> Built the entire e-commerce department from zero for a multi-brand wholesale accessories company. 8–10 brands, 500+ SKUs, 12+ channels, $150K gross in one month with zero ad spend.</li>
+          <li><strong>Area Stars (2022–Present):</strong> Shopify management, AI visual workflow development, and marketplace strategy — demonstrates I operate simultaneously across multiple brand relationships.</li>
+          <li><strong>Mystique Boutique (2017–2020):</strong> Built full Shopify operation, product photography, fulfillment, and marketing from scratch.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="lbl">Technical Skills</div>
+        <ul class="ul">
+          <li>Shopify — full platform builds, migrations, integrations, and optimization</li>
+          <li>Amazon Seller &amp; Vendor Central, Walmart, TikTok Shop, Meta Commerce, Pinterest Shop, Google Shopping</li>
+          <li>EDI, CommerceHub/Disco, Rithum, Mirakl, Shopify Marketplace Connect</li>
+          <li>Adobe Photoshop, Illustrator, Lightroom, Premiere — mastery level</li>
+          <li>AI tools: Adobe Firefly, Midjourney — proven workflows for product and lifestyle imagery</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="lbl">Education</div>
+        <ul class="ul">
+          <li><strong>BFA, Photography &amp; Related Media</strong> — Fashion Institute of Technology, New York</li>
+          <li><strong>AAS</strong> — Fashion Institute of Technology, New York</li>
+          <li>Commercial photography background informs every creative production decision and quality standard</li>
+          <li>Trilingual: English · Portuguese · Spanish — dual US/Portugal nationality</li>
+        </ul>
+      </div>
+      <div class="card ac">
+        <div class="lbl">Key Achievements</div>
+        <ul class="ul">
+          <li><strong>$150K gross sales in one month</strong> — focused SKU launch, zero ad spend</li>
+          <li><strong>$100K+ saved</strong> — custom Shopify integration architecture replacing per-channel enterprise fees</li>
+          <li>Onboarded AAFES, Nordstrom, Belk, Saks Off Fifth, Ulta, Staples from zero</li>
+          <li>Built AI creative workflow producing 10× listing speed for multi-brand wholesale operation</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:12px;text-align:center;padding:18px;">
+        <div class="lbl" style="text-align:center;margin-bottom:10px;">Contact</div>
+        <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.3rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">CRISTINA MIRAO</div>
+        <div style="font-size:0.8rem;color:var(--mu);line-height:1.8;">📞 (516) 503-1573<br>✉️ cristinadmirao@gmail.com<br>💼 linkedin.com/in/cristina-d-mirao</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- stage -->
+
+<div class="bottombar">
+  <button class="nav-btn" id="prevBtn" onclick="prev()" disabled="">← Previous</button>
+  <div class="dots" id="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+  <button class="nav-btn primary" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+<script>
+const LABELS=['Cover','Executive Summary','Customer Profile','Full Digital Audit','Shopify Migration','Channel Strategy','AI Creative','SEO & Social','90-Day Plan','Brand Gallery','About Cristina'];
+const PILLS=['Cover','Summary','Profile','Audit','Shopify','Channels','AI','SEO+Social','90 Days','Gallery','About'];
+let cur=0;
+const total=LABELS.length;
+const pillRow=document.getElementById('pills');
+const dotRow=document.getElementById('dots');
+PILLS.forEach((p,i)=>{
+  const b=document.createElement('button');
+  b.className='pill'+(i===0?' active':'');
+  b.textContent=p;b.onclick=()=>goTo(i);pillRow.appendChild(b);
+  const d=document.createElement('div');
+  d.className='dot'+(i===0?' active':'');
+  d.onclick=()=>goTo(i);dotRow.appendChild(d);
+});
+document.getElementById('tot').textContent=total;
+function loadImg(input,slot){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const container=input.closest('.img-slot');
+    container.innerHTML=`<img class="img-loaded" src="${e.target.result}" onclick="replaceImg(this,${slot})" title="Click to replace">`;
+  };reader.readAsDataURL(file);
+}
+function replaceImg(img,slot){
+  const input=document.createElement('input');input.type='file';input.accept='image/*';
+  input.onchange=function(){const file=this.files[0];if(!file)return;const reader=new FileReader();reader.onload=function(e){img.src=e.target.result;};reader.readAsDataURL(file);};
+  input.click();
+}
+function goTo(n){
+  document.querySelectorAll('.slide')[cur].classList.remove('active');
+  document.querySelectorAll('.pill')[cur].classList.remove('active');
+  document.querySelectorAll('.dot')[cur].classList.remove('active');
+  cur=Math.max(0,Math.min(total-1,n));
+  document.querySelectorAll('.slide')[cur].classList.add('active');
+  document.querySelectorAll('.pill')[cur].classList.add('active');
+  document.querySelectorAll('.dot')[cur].classList.add('active');
+  document.querySelectorAll('.slide')[cur].scrollTop=0;
+  document.getElementById('cur').textContent=cur+1;
+  document.getElementById('prevBtn').disabled=cur===0;
+  const nb=document.getElementById('nextBtn');
+  nb.disabled=cur===total-1;
+  nb.textContent=cur===total-2?'Finish →':'Next →';
+}
+function next(){goTo(cur+1);}function prev(){goTo(cur-1);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')next();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')prev();
+});
+</script>
+
+</body></html>

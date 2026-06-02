@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///Users/cristinamirao/Downloads/soybu_growth_deck_3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soybu — Digital Growth Strategy | Cristina Mirao</title>
+<link href="./Soybu — Digital Growth Strategy _ Cristina Mirao_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#131a14;--s2:#1a231b;--s3:#212d22;
+  --ac:#8fbc8f;--ac2:#b8d4b8;
+  --wh:#f0f5f0;--tx:#cdd9cd;--mu:#7a9c7a;
+  --bd:rgba(143,188,143,0.12);--bd2:rgba(143,188,143,0.07);
+  --or:#d4956a;--ye:#c9b870;--gr:#6db86d;--re:#c97070;
+}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--tx);height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;flex-shrink:0;background:rgba(0,0,0,0.5);border-bottom:1px solid var(--bd);}
+.brand-id{display:flex;align-items:center;gap:12px;}
+.brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.15em;color:var(--ac);}
+.sep{width:1px;height:20px;background:var(--bd);}
+.doc-label{font-size:0.68rem;font-weight:600;color:var(--mu);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-pills{display:flex;gap:2px;overflow:hidden;min-width:0;flex-shrink:1;}
+.pill{border:none;background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:5px 10px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.pill:hover{color:var(--tx);background:rgba(255,255,255,0.06);}
+.pill.active{background:var(--ac);color:var(--bg);}
+.counter{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--mu);}
+.counter em{color:var(--ac);font-style:normal;font-weight:700;}
+
+/* STAGE */
+.stage{flex:1;overflow:hidden;}
+.slide{display:none;height:100%;overflow-y:auto;padding:30px 48px 24px;animation:sIn 0.3s ease both;scrollbar-width:thin;scrollbar-color:var(--bd) transparent;}
+.slide.active{display:block;}
+@keyframes sIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* SHARED */
+.ey{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:6px;}
+.h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.4vw,3rem);letter-spacing:0.07em;line-height:1;margin-bottom:8px;color:var(--wh);}
+.h1 .ac{color:var(--ac);}
+.narrative{font-size:0.86rem;color:var(--tx);line-height:1.75;margin-bottom:22px;max-width:780px;border-left:3px solid var(--bd);padding-left:16px;}
+.narrative strong{color:var(--wh);}
+.card{background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:18px 20px;}
+.card.ac{border-color:rgba(143,188,143,0.3);background:rgba(143,188,143,0.06);}
+.card.warn{border-color:rgba(212,149,106,0.3);background:rgba(212,149,106,0.05);}
+.card.impact{border-color:rgba(143,188,143,0.4);background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));margin-top:14px;}
+.lbl{font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px;color:var(--ac);}
+.lbl.o{color:var(--or);}
+.lbl.y{color:var(--ye);}
+.lbl.g{color:var(--gr);}
+.lbl.r{color:var(--re);}
+.ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.ul li{font-size:0.8rem;color:var(--tx);display:flex;gap:9px;align-items:flex-start;line-height:1.5;}
+.ul li::before{content:'→';color:var(--ac);flex-shrink:0;font-size:0.72rem;margin-top:2px;}
+.ul.warn li::before{content:'⚠';color:var(--or);font-size:0.65rem;margin-top:3px;}
+.ul.check li::before{content:'✓';color:var(--gr);}
+.ul.dot li::before{content:'✦';color:var(--ac);font-size:0.55rem;margin-top:3px;}
+.ul li strong{color:var(--wh);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+.stat{background:var(--s3);border:1px solid var(--bd2);border-radius:11px;padding:14px 12px;text-align:center;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.06em;color:var(--ac);line-height:1;}
+.stat-d{font-size:0.7rem;color:var(--mu);margin-top:3px;line-height:1.35;}
+.ch-badge{font-family:'DM Mono',monospace;font-size:0.56rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:6px;}
+.ch-badge.live{background:rgba(109,184,109,0.12);color:var(--gr);}
+.ch-badge.grow{background:rgba(201,184,112,0.12);color:var(--ye);}
+.ch-badge.new{background:rgba(212,149,106,0.12);color:var(--or);}
+.ch-badge.free{background:rgba(143,188,143,0.12);color:var(--ac);}
+.impact-bar{background:linear-gradient(135deg,rgba(143,188,143,0.1),rgba(143,188,143,0.04));border:1px solid rgba(143,188,143,0.35);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.impact-bar .lbl{margin-bottom:6px;}
+.impact-bar p{font-size:0.84rem;line-height:1.7;color:var(--tx);}
+.impact-bar p strong{color:var(--wh);}
+
+/* COVER */
+.cover-wrap{display:flex;flex-direction:column;justify-content:center;height:calc(100vh - 118px);gap:0;}
+.cover-pre{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--ac);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;}
+.cover-brand{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,7rem);letter-spacing:0.08em;line-height:0.88;color:var(--wh);margin-bottom:6px;}
+.cover-brand span{color:var(--ac);}
+.cover-sub{font-size:1rem;font-weight:500;color:var(--mu);margin-bottom:32px;line-height:1.6;}
+.cover-divider{height:1px;background:var(--bd);margin:28px 0;}
+.cover-by{font-size:0.78rem;font-weight:600;color:var(--mu);margin-bottom:8px;letter-spacing:0.04em;}
+.cover-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:10px;}
+.cover-creds{display:flex;flex-wrap:wrap;gap:7px;}
+.cred-tag{border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:var(--mu);}
+.cred-tag.ac{border-color:rgba(143,188,143,0.4);color:var(--ac);}
+
+/* IMAGE SLOTS */
+.img-slot { border-radius:10px; overflow:hidden; aspect-ratio:4/3; }
+.img-placeholder {
+  width:100%; height:100%; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background:var(--s3); border:2px dashed var(--bd);
+  border-radius:10px; cursor:pointer; transition:all 0.2s;
+  gap:6px;
+}
+.img-placeholder:hover { border-color:var(--ac); background:rgba(143,188,143,0.06); }
+.img-plus { font-size:1.8rem; color:var(--mu); }
+.img-hint { font-size:0.72rem; color:var(--mu); font-weight:600; letter-spacing:0.04em; }
+.img-loaded { width:100%; height:100%; object-fit:cover; border-radius:10px; display:block; cursor:pointer; }
+
+/* IMAGE SLOTS */
+
+/* BOTTOMBAR */
+.bottombar{display:flex;justify-content:space-between;align-items:center;padding:0 32px;height:44px;flex-shrink:0;background:rgba(0,0,0,0.5);border-top:1px solid var(--bd);}
+.nav-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--bd);background:none;color:var(--mu);font-family:'Manrope',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all 0.18s;}
+.nav-btn:hover{color:var(--tx);border-color:var(--ac);}
+.nav-btn.primary{background:var(--ac);color:var(--bg);border-color:var(--ac);}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed;}
+.dots{display:flex;gap:5px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.1);cursor:pointer;transition:all 0.18s;}
+.dot.active{background:var(--ac);transform:scale(1.3);}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand-id">
+    <div class="brand-name">SOYBU</div>
+    <div class="sep"></div>
+    <div class="doc-label">Digital Growth Strategy — Studio Ray</div>
+  </div>
+  <div class="nav-pills" id="pills"></div>
+  <div class="counter"><em id="cur">1</em> / <span id="tot">11</span></div>
+</div>
+
+<div class="stage">
+
+<!-- SLIDE 1: COVER -->
+<div class="slide active">
+  <div class="cover-wrap">
+    <div class="cover-pre">Studio Ray Portfolio · Digital Growth Strategy</div>
+    <div class="cover-brand">SOY<span>BU</span></div>
+    <div class="cover-sub">A complete e-commerce and digital brand growth strategy<br>for Soybu activewear — from audit to execution.</div>
+    <div class="cover-divider"></div>
+    <div class="cover-by">Prepared exclusively for Studio Ray by</div>
+    <div class="cover-name">CRISTINA MIRAO</div>
+    <div class="cover-creds">
+      <span class="cred-tag ac">E-Commerce Manager</span>
+      <span class="cred-tag ac">Digital Creative Producer</span>
+      <span class="cred-tag ac">Shopify Expert</span>
+      <span class="cred-tag ac">AI Workflow Specialist</span>
+      <span class="cred-tag">8+ Years Fashion E-Commerce</span>
+      <span class="cred-tag">12+ Marketplaces Launched</span>
+      <span class="cred-tag">FIT — BFA Photography</span>
+      <span class="cred-tag">Adobe CC Mastery</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: EXECUTIVE SUMMARY -->
+<div class="slide">
+  <div class="ey">Executive Summary</div>
+  <div class="h1">The Soybu<br><span class="ac">Opportunity.</span></div>
+  <div class="narrative">Soybu is a 26-year activewear brand with genuine product quality, an eco-conscious identity, and a Shopify foundation already in place — yet it remains largely invisible on the fastest-growing commerce platforms of 2026. <strong>This document outlines the specific steps to change that, the channels that will drive revenue growth, and exactly how I would execute this strategy as your hire.</strong></div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-n">1998</div><div class="stat-d">Brand founded — 26 years of heritage and customer trust</div></div>
+    <div class="stat"><div class="stat-n">$400B</div><div class="stat-d">Global activewear market — growing 6% annually through 2030</div></div>
+    <div class="stat"><div class="stat-n">✓</div><div class="stat-d">Already on Shopify — no migration cost, build on existing foundation</div></div>
+    <div class="stat"><div class="stat-n">$0</div><div class="stat-d">Current TikTok Shop revenue — the fastest growing commerce channel is untapped</div></div>
+  </div>
+  <div class="two">
+    <div class="card ac">
+      <div class="lbl">What Soybu Has Going For It</div>
+      <ul class="ul check">
+        <li>Shopify store already live — foundation is in place, execution begins immediately</li>
+        <li>Eco-friendly recycled fiber story — perfectly aligned with 2026 consumer demand for sustainable activewear</li>
+        <li>Amazon store active with existing product reviews and brand recognition</li>
+        <li>17,600 Facebook followers — a warm audience ready to be converted to shoppers</li>
+        <li>Peace symbol brand identity — distinctive, meaningful, and ownable in a crowded market</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <div class="lbl o">What's Holding Soybu Back</div>
+      <ul class="ul warn">
+        <li>No TikTok Shop — activewear is the platform's #1 apparel category and Soybu is completely absent</li>
+        <li>Not on Walmart Marketplace — 150 million monthly shoppers not being reached</li>
+        <li>No email capture or automation — every site visitor who leaves without buying is lost permanently</li>
+        <li>Instagram following of only 8,400 after 26 years — the social presence doesn't match the brand's quality</li>
+        <li>Limited SKU assortment shown online — only women's tops and bottoms visible despite broader product range</li>
+      </ul>
+    </div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">The Business Case for Acting Now</div>
+    <p>Soybu's eco-conscious story, performance credentials, and Shopify infrastructure represent a brand that is <strong>market-ready but digitally under-deployed.</strong> Competitors in the sustainable activewear space — including newer brands with less heritage — are growing rapidly on TikTok Shop and Walmart. Every month without these channels active is market share being conceded to brands with inferior products but stronger digital execution.</p>
+  </div>
+</div>
+
+<!-- CUSTOMER PROFILE -->
+<div class="slide">
+  <div class="ey">Brand Audience</div>
+  <div class="h1">Who Buys<br><span class="ac">Soybu.</span></div>
+  <div class="narrative">Soybu's customer is not a mass-market activewear buyer. <strong>She is a values-driven consumer who shops with intention — and whose loyalty, once earned, becomes genuine brand advocacy within her community.</strong> Understanding her is the key to everything in this strategy.</div>
+  <div style="background:linear-gradient(135deg,rgba(143,188,143,0.15),rgba(143,188,143,0.04));border:1px solid rgba(143,188,143,0.3);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:20px;margin-bottom:13px;">
+    <div style="width:56px;height:56px;border-radius:50%;background:rgba(143,188,143,0.2);border:2px solid var(--ac);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;">🧘</div>
+    <div style="flex:1;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">"MAYA" — The Wellness-Forward Active Woman</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Age 28–44</span>
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Income $55K–$95K</span>
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Urban &amp; Suburban</span>
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Practices Yoga 3–5x/Week</span>
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Eco-Conscious Shopper</span>
+        <span style="background:rgba(143,188,143,0.12);border:1px solid rgba(143,188,143,0.3);border-radius:20px;padding:3px 11px;font-size:0.7rem;font-weight:700;color:var(--ac);">Fiercely Brand Loyal Once Won</span>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
+    <div class="card">
+      <div style="font-size:1.1rem;margin-bottom:7px;">🌿</div>
+      <div class="lbl">Who She Is</div>
+      <p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Reads ingredient labels and fabric certifications before buying. Follows wellness and sustainability creators on TikTok and Instagram. Buys fewer pieces but expects quality and ethical production. She'll tell her entire yoga class about a brand she loves — word of mouth from this customer is worth more than any paid ad.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.1rem;margin-bottom:7px;">💫</div>
+      <div class="lbl">What She Wants</div>
+      <p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Activewear that performs in class AND looks good getting coffee after. Eco credentials she can genuinely stand behind — not greenwashing. A brand with a real story and founder mission. She is not looking for the cheapest option. She is looking for the right one and will pay for it when the values align.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.1rem;margin-bottom:7px;">🛒</div>
+      <div class="lbl">How She Buys</div>
+      <p style="font-size:0.78rem;color:var(--tx);line-height:1.65;">Discovers through TikTok wellness creators and Instagram Reels. Researches on Pinterest before purchasing. Reads multiple reviews. Is moved by authentic creator content — not polished ads. Buys when she trusts the brand story. Once converted, she advocates and refers. Her community trusts her recommendations explicitly.</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:12px;margin-bottom:12px;">
+    <div style="flex:1;background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">Where She Discovers Soybu</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
+        <span style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#f5a05a;">🎵 TikTok Wellness Creators</span>
+        <span style="background:rgba(225,48,108,0.08);border:1px solid rgba(225,48,108,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#e1306c;">📸 Instagram Reels</span>
+        <span style="background:rgba(230,0,35,0.07);border:1px solid rgba(230,0,35,0.15);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#e60023;">📌 Pinterest Yoga Boards</span>
+        <span style="background:rgba(143,188,143,0.1);border:1px solid rgba(143,188,143,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">🤝 Yoga Community WOM</span>
+        <span style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#6db86d;">🔍 Google Search</span>
+        <span style="background:rgba(143,188,143,0.1);border:1px solid rgba(143,188,143,0.2);border-radius:16px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--ac);">📦 Amazon</span>
+      </div>
+    </div>
+    <div style="flex:1;background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:14px 16px;">
+      <div class="lbl">What Triggers Her Purchase</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px;">
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>A creator she trusts wearing it authentically — not an ad, a genuine recommendation</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>"Made from X recycled plastic bottles" — specific eco proof, not vague sustainability claims</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>4.5+ star reviews specifically mentioning fabric quality and true-to-size fit</div>
+        <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:8px;"><span style="color:var(--ac);flex-shrink:0;">→</span>The peace symbol — she wears her values, and Soybu's identity lets her do exactly that</div>
+      </div>
+    </div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">The Soybu Customer Insight</div>
+    <p>Maya doesn't just buy activewear — <strong>she signals her values through the brands she wears.</strong> Soybu's peace symbol identity, recycled fiber story, and 26-year heritage give her something to believe in and wear beautifully. The brand just needs to find her where she is — and right now, she's on TikTok, Instagram, and Pinterest, looking for exactly this.</p>
+  </div>
+</div>
+
+
+<!-- SLIDE 3: AUDIT -->
+<div class="slide">
+  <div class="ey">Full Digital Audit</div>
+  <div class="h1">Where Soybu<br><span class="ac">Stands Today.</span></div>
+  <div class="narrative">This audit is based on a thorough review of soybu.com, the Amazon store, social channels, and marketplace presence. The goal is an honest assessment — what's working, what needs immediate attention, and what's missing entirely. <strong>Every gap identified here is a revenue opportunity with a clear fix.</strong></div>
+  <div class="two" style="margin-bottom:14px;">
+    <div>
+      <div class="lbl g" style="margin-bottom:10px;">What's Working — Build On These</div>
+      <div class="card" style="margin-bottom:10px;">
+        <div class="lbl">Shopify Platform — Ready to Scale</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:8px;">The most important infrastructure decision is already made — Soybu is on Shopify. This means every marketplace integration, email tool, SEO enhancement, and social commerce connection can be built immediately with no platform migration cost or delay.</p>
+        <ul class="ul check"><li>Free returns and shipping offer in place — strong DTC competitive positioning</li><li>Product pages live for core categories with existing customer reviews</li></ul>
+      </div>
+      <div class="card">
+        <div class="lbl">Brand Identity — Distinctive and Ownable</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:8px;">The peace symbol logo, eco-conscious positioning, and "active lifestyle from sunrise to sunset" messaging are authentic and differentiated. In a market where most activewear brands are interchangeable, Soybu has a real story. It just isn't being told loudly enough.</p>
+        <ul class="ul check"><li>Recycled fiber story — consumers actively search "sustainable activewear" and "eco yoga pants"</li><li>Facebook community of 17,600 fans provides a warm retargeting audience from day one</li></ul>
+      </div>
+    </div>
+    <div>
+      <div class="lbl r" style="margin-bottom:10px;">Gaps — These Are Costing Revenue Daily</div>
+      <div class="card warn" style="margin-bottom:10px;">
+        <div class="lbl o">Missing Commerce Channels</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:8px;">Soybu is not selling on the two fastest-growing apparel platforms of 2025–2026. TikTok Shop generated $15.8 billion in US sales last year and activewear is its top-performing category. Walmart Marketplace serves 150 million monthly visitors with growing demand for sustainable athletic apparel.</p>
+        <ul class="ul warn"><li>No TikTok Shop — leaving the highest-growth social commerce channel entirely to competitors</li><li>No Walmart Marketplace presence — significant volume opportunity at appropriate price point</li><li>No Google Shopping free listings — zero-cost organic traffic channel not activated</li></ul>
+      </div>
+      <div class="card warn">
+        <div class="lbl o">Site and Email Gaps</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:8px;">The Shopify site is underutilizing its own capabilities. There is no email capture mechanism visible, meaning every visitor who doesn't convert on their first visit is permanently lost. Email marketing delivers an average return of $42 for every $1 spent — the absence of this system is a measurable and ongoing revenue loss.</p>
+        <ul class="ul warn"><li>No pop-up or email capture — zero list building happening despite site traffic</li><li>Only two product categories visible — full assortment not represented online</li><li>No blog or SEO content — organic search traffic from "eco activewear" searches not being captured</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: MARKETPLACE EXPANSION -->
+<div class="slide">
+  <div class="ey">Marketplace &amp; Channel Strategy</div>
+  <div class="h1">New Revenue Channels.<br><span class="ac">Built to Scale.</span></div>
+  <div class="narrative">Soybu's eco-conscious activewear story sells itself on the right platforms — the brand just hasn't been there yet. The strategy below is sequenced by impact and speed of execution, with the highest-ROI channels prioritized first. <strong>The emphasis throughout is on organic and low-cost growth — letting the product and brand story do the selling rather than relying on paid advertising.</strong></div>
+  <div class="three" style="margin-bottom:14px;">
+    <div class="card" style="border-color:rgba(109,184,109,0.25);">
+      <div class="ch-badge live">✓ Active — Optimize</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">Amazon Store</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">The store exists with active listings and customer reviews — a strong foundation. The opportunity is to significantly improve how the brand presents itself. A+ content, an enhanced brand story module, and keyword-optimized titles for eco and performance search terms will directly increase organic ranking and conversion rate.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Priority: A+ content + SEO rewrite — Week 1</div>
+    </div>
+    <div class="card" style="border-color:rgba(201,184,112,0.3);">
+      <div class="ch-badge grow">↑ Launch Immediately</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">TikTok Shop</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">Activewear is TikTok Shop's single highest-performing apparel category. Yoga pants, leggings, and sports bras go viral weekly on the platform. Soybu's eco story and aesthetic are precisely what wellness and sustainability creators post about. The creator affiliate model means brands grow through creators who earn commission — zero upfront ad spend required.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Priority: Month 1 launch — highest growth potential</div>
+    </div>
+    <div class="card" style="border-color:rgba(201,184,112,0.3);">
+      <div class="ch-badge grow">↑ Launch Now</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">Walmart Marketplace</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">Walmart's activewear category is growing rapidly and there is notably low competition from premium eco-conscious brands at Soybu's price point. 150 million monthly unique visitors — many of whom are specifically searching for affordable athletic apparel with quality credentials that Soybu can offer.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Priority: Onboard Month 1–2</div>
+    </div>
+    <div class="card" style="border-color:rgba(143,188,143,0.2);">
+      <div class="ch-badge free">Free Channel</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">Google Shopping (Free Listings)</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">Shopify stores can push product listings to the Google Shopping tab at zero cost through Google Merchant Center. This is a frequently overlooked channel that delivers high-intent organic traffic. Searches like "eco yoga pants," "recycled activewear women," and "sustainable leggings" all have significant volume that Soybu should be capturing for free.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Setup in hours — zero ongoing cost</div>
+    </div>
+    <div class="card" style="border-color:rgba(201,184,112,0.3);">
+      <div class="ch-badge grow">↑ Activate</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">Instagram + Facebook Shop</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">Soybu's 17,600 Facebook followers represent a warm, existing audience that can be converted to shoppers immediately by connecting the Shopify catalog to Facebook and Instagram Shop. Every product post becomes shoppable. Reels showing the product in use drive both discovery and direct purchase through in-app checkout.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Connect catalog — Week 1</div>
+    </div>
+    <div class="card" style="border-color:rgba(212,149,106,0.3);">
+      <div class="ch-badge new">★ New Opportunity</div>
+      <div style="font-weight:800;font-size:0.87rem;color:var(--wh);margin-bottom:6px;">Faire Wholesale + Target.com</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.55;margin-bottom:8px;">Faire connects brands to 700,000+ independent boutique retailers globally — yoga studios, wellness shops, and boutique fitness stores are a natural fit for Soybu's positioning. Target.com's sustainable and active apparel buyer is also a strong match at Soybu's price point and quality level.</p>
+      <div style="font-size:0.7rem;color:var(--ac);font-weight:600;">Pitch Month 2–3</div>
+    </div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">Low Ad Spend Philosophy</div>
+    <p>Every channel in this strategy is selected for its <strong>organic growth potential</strong>. TikTok creator affiliates earn commission on sales — no upfront cost. Google Shopping free listings require no bid. Email marketing returns $42 per $1 spent once built. Pinterest boards rank in Google image search naturally. The goal is sustainable revenue growth driven by brand equity and smart channel placement — not paid media dependency.</p>
+  </div>
+</div>
+
+<!-- SLIDE 5: AI IMAGERY -->
+<div class="slide">
+  <div class="ey">Creative Production &amp; AI Workflows</div>
+  <div class="h1">Faster to Market.<br><span class="ac">Lower Production Cost.</span></div>
+  <div class="narrative">One of the most significant costs in running a multi-channel apparel brand is creative production — photography, retouching, lifestyle imagery, and vendor-specific asset creation. <strong>AI-powered workflows fundamentally change this equation, reducing production timelines by up to 10 times while cutting costs associated with expensive shoots and physical sampling.</strong> This is an area where I have built real, proven workflows.</div>
+  <div class="three" style="margin-bottom:14px;">
+    <div class="card ac">
+      <div style="font-size:1.3rem;margin-bottom:8px;">🎨</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">Wholesale Sample Replacement</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Before a physical sample is cut, AI renders can show buyers every colorway, silhouette variation, and styling option at full professional quality. This allows Studio Ray to present new Soybu collections to wholesale buyers earlier in the season, reduces the cost of producing unnecessary samples, and lets the team test buyer response before committing to production runs. The savings compound across every new season launch.</p>
+    </div>
+    <div class="card ac">
+      <div style="font-size:1.3rem;margin-bottom:8px;">📐</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">Vendor-Compliant Image Production</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Amazon requires white background images at 2000 pixels minimum. Walmart, Target, Faire, and Instagram each have different specifications. My AI-assisted batch workflow takes a single master product shoot and automatically produces correctly formatted, compliant images for every vendor simultaneously — eliminating the time and cost of producing separate asset packages per retailer.</p>
+    </div>
+    <div class="card ac">
+      <div style="font-size:1.3rem;margin-bottom:8px;">🧘</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">Lifestyle Scene Generation</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Soybu's aesthetic requires lifestyle imagery — yoga studios, outdoor settings, wellness environments — that communicates the brand experience, not just the product. AI-generated scene compositing allows me to produce beautiful, on-brand lifestyle imagery for every seasonal campaign without the cost of booking locations, models, and production crews for every shoot.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.3rem;margin-bottom:8px;">🌿</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">Eco Brand Story Content</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Soybu's recycled fiber story is its most powerful marketing asset for 2026. AI produces branded infographics, sustainability fact cards, and "this garment contains X recycled bottles" content that performs exceptionally well with eco-conscious audiences on Instagram, Pinterest, and TikTok. This content educates, builds brand loyalty, and drives organic shares — all at near-zero production cost.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.3rem;margin-bottom:8px;">⚡</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">10x Listing Production Speed</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">My AI-assisted copywriting workflow generates platform-optimized product titles, bullet points, and descriptions for every SKU in a fraction of the time traditional copywriting requires. A new collection that would previously take weeks to write and upload can be live across all channels in days — getting to market ahead of the season rather than behind it.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.3rem;margin-bottom:8px;">📱</div>
+      <div style="font-weight:800;font-size:0.85rem;color:var(--wh);margin-bottom:7px;">One Shoot. Every Platform.</div>
+      <p style="font-size:0.77rem;color:var(--mu);line-height:1.6;">Every product shoot is reformatted by AI into platform-native dimensions and aspect ratios: TikTok vertical video, Instagram square, Pinterest tall pin, Amazon carousel, Walmart hero image. One production investment provides assets for every channel simultaneously — dramatically improving the return on every photography investment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: SEO + CONTENT -->
+<div class="slide">
+  <div class="ey">SEO &amp; Content Strategy</div>
+  <div class="h1">Making Soybu<br><span class="ac">Discoverable.</span></div>
+  <div class="narrative">Soybu has a remarkable story — 26 years of performance apparel, eco-conscious materials, and a peace-inspired brand identity — but none of it is currently optimized for search discovery. <strong>Consumers are actively searching for exactly what Soybu makes.</strong> The opportunity is to meet them where they are, at the moment of intent, with content that converts interest into purchase.</div>
+  <div class="two" style="margin-bottom:14px;">
+    <div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="lbl">AI-Powered Product SEO</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:10px;">Every product title and description across Shopify, Amazon, and Walmart will be rewritten using AI to target the search terms Soybu's customers are actually using. This is not keyword stuffing — it's intelligently matching product language to buyer intent, which directly improves organic ranking without any advertising spend.</p>
+        <ul class="ul">
+          <li><strong>High-intent targets:</strong> "eco-friendly yoga pants women," "recycled fiber leggings," "sustainable activewear USA," "yoga pants with pockets eco"</li>
+          <li>Structured data and meta tags added to all Shopify collection and product pages</li>
+          <li>Amazon backend keywords fully optimized for category and feature searches</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="lbl">Google Shopping Free Channel</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:10px;">Google Merchant Center integration with Shopify enables free product placement in the Google Shopping tab. This is a high-intent channel — shoppers clicking Shopping tab results are ready to buy. Setup takes hours, requires no ongoing spend, and delivers permanent organic visibility for all of Soybu's product catalog.</p>
+        <ul class="ul">
+          <li>Shopify product feed connected to Google Merchant Center — immediate free placement</li>
+          <li>Clean product data, accurate pricing, and proper categorization maximizes organic Shopping rank</li>
+          <li>Every new product added to Shopify automatically appears in Google Shopping</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="lbl">Content &amp; Blog Strategy</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:10px;">A brand with Soybu's story — eco materials, performance credentials, 26 years of product development — has extraordinary content potential that is currently untapped. An active blog targeting high-value search terms builds organic traffic over time, establishes brand authority, and supports every other channel by giving social and email content a home to link back to.</p>
+        <ul class="ul">
+          <li>"Best eco-friendly yoga pants 2026" — one of the highest-volume sustainable activewear search terms</li>
+          <li>"Recycled fiber activewear: why it matters for your practice and the planet" — brand story SEO</li>
+          <li>"How to style activewear from studio to street" — lifestyle content that converts</li>
+          <li>"Soybu sizing guide and fit guide" — reduces returns, improves conversion rate</li>
+          <li>AI-assisted production: 2 posts per month, built around seasonal search trends and peak buying periods</li>
+        </ul>
+      </div>
+      <div class="card ac">
+        <div class="lbl">Email Marketing — Highest ROI Channel</div>
+        <p style="font-size:0.8rem;line-height:1.65;color:var(--tx);margin-bottom:10px;">Email marketing consistently delivers a $42 return for every $1 spent — higher than any paid advertising channel. Currently Soybu has no visible email capture or automation in place, which means every site visitor who doesn't buy on their first visit is lost forever. This is the first thing I would fix.</p>
+        <ul class="ul">
+          <li>Pop-up with offer (10% off first order) to capture emails from day one of my start</li>
+          <li>Welcome series: brand story, eco mission, best sellers — sets expectations and builds loyalty</li>
+          <li>Seasonal campaigns aligned with new collection launches and promotional moments</li>
+          <li>Abandoned cart recovery — automatically recaptures buyers who didn't complete checkout</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: SOCIAL -->
+<div class="slide">
+  <div class="ey">Social Commerce Strategy</div>
+  <div class="h1">Building the Soybu<br><span class="ac">Community.</span></div>
+  <div class="narrative">Soybu's wellness audience is one of the most socially engaged on the internet. <strong>The strategy below turns that engagement into direct revenue — through creator affiliates, shoppable posts, and organic discovery — at near-zero ad spend.</strong></div>
+
+  <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;">
+
+    <!-- TikTok -->
+    <div style="display:flex;border-radius:12px;overflow:hidden;border:1px solid rgba(249,115,22,0.25);background:var(--s3);">
+      <div style="width:180px;flex-shrink:0;background:rgba(249,115,22,0.12);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(249,115,22,0.2);">
+        <div style="font-size:1.4rem;margin-bottom:4px;">🎵</div>
+        <div style="font-weight:800;font-size:0.88rem;color:#f5a05a;line-height:1.2;">TikTok Shop</div>
+        <div style="font-size:0.62rem;color:var(--mu);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Priority</div>
+      </div>
+      <div style="flex:1;padding:14px 18px;min-width:0;">
+        <div style="font-size:0.65rem;color:var(--mu);margin-bottom:8px;">$15.8B US sales 2025 · Activewear = #1 TikTok category · Creator affiliate = zero upfront ad cost</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>TikTok Shop catalog live — week one</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Micro-influencer affiliate network — commission model, zero spend</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>"How Do You Soybu" hashtag campaign</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Weekly flow, transition &amp; eco story videos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div style="display:flex;border-radius:12px;overflow:hidden;border:1px solid rgba(225,48,108,0.2);background:var(--s3);">
+      <div style="width:180px;flex-shrink:0;background:rgba(225,48,108,0.1);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(225,48,108,0.15);">
+        <div style="font-size:1.4rem;margin-bottom:4px;">📸</div>
+        <div style="font-weight:800;font-size:0.88rem;color:#e1306c;line-height:1.2;">Instagram</div>
+        <div style="font-size:0.62rem;color:var(--mu);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Convert</div>
+      </div>
+      <div style="flex:1;padding:14px 18px;min-width:0;">
+        <div style="font-size:0.65rem;color:var(--mu);margin-bottom:8px;">8,400 followers · Reels-first algorithm 2026 · In-app checkout via Instagram Shop</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Instagram Shop connected — all posts shoppable</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>3 Reels/week: transitions, demos, eco story</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Seasonal editorial grid per collection</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Daily Stories: highlights, education, polls</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pinterest -->
+    <div style="display:flex;border-radius:12px;overflow:hidden;border:1px solid rgba(230,0,35,0.18);background:var(--s3);">
+      <div style="width:180px;flex-shrink:0;background:rgba(230,0,35,0.08);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(230,0,35,0.12);">
+        <div style="font-size:1.4rem;margin-bottom:4px;">📌</div>
+        <div style="font-weight:800;font-size:0.88rem;color:#e60023;line-height:1.2;">Pinterest</div>
+        <div style="font-size:0.62rem;color:var(--mu);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Discover</div>
+      </div>
+      <div style="flex:1;padding:14px 18px;min-width:0;">
+        <div style="font-size:0.65rem;color:var(--mu);margin-bottom:8px;">#1 platform for yoga &amp; wellness inspiration · Boards rank in Google image search · Free organic reach</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Shoppable boards: Yoga Looks, Eco Activewear</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Studio to Street, Sustainable Style boards</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Ranks in Google image search organically</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>AI lifestyle imagery fills boards at near-zero cost</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facebook -->
+    <div style="display:flex;border-radius:12px;overflow:hidden;border:1px solid rgba(66,103,178,0.25);background:var(--s3);">
+      <div style="width:180px;flex-shrink:0;background:rgba(66,103,178,0.1);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(66,103,178,0.15);">
+        <div style="font-size:1.4rem;margin-bottom:4px;">👍</div>
+        <div style="font-weight:800;font-size:0.88rem;color:#6b8fd4;line-height:1.2;">Facebook</div>
+        <div style="font-size:0.62rem;color:var(--mu);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Retarget</div>
+      </div>
+      <div style="flex:1;padding:14px 18px;min-width:0;">
+        <div style="font-size:0.65rem;color:var(--mu);margin-bottom:8px;">17,600 existing fans · Lowest CPM retargeting audience available · Facebook Shop integration</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Facebook Shop — 17,600 fans become shoppers</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Retargeting at lowest possible CPM</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>"Soybu Community" group — loyalty building</div>
+          <div style="font-size:0.77rem;color:var(--tx);display:flex;gap:6px;"><span style="color:#8fbc8f;flex-shrink:0;">✦</span>Seasonal promotional campaigns to warm audiences</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="impact-bar">
+    <div class="lbl">The Low-Cost Growth Model</div>
+    <p>Every platform above is selected for <strong>organic-first, low-ad-spend growth.</strong> TikTok creator affiliates earn commission — zero upfront cost. Pinterest ranks in Google for free. Facebook retargeting reaches a warm audience at the lowest CPM available. The goal is building a community that sells for the brand, not buying attention.</p>
+  </div>
+</div>
+
+<!-- SLIDE 8.5: BRAND IMAGERY -->
+<div class="slide">
+  <div class="ey">Brand Creative Showcase</div>
+  <div class="h1">Soybu in<br><span class="ac">Motion.</span></div>
+  <div class="narrative">A sample of the type of brand imagery and creative direction that brings Soybu's eco-conscious, wellness-forward identity to life across all digital channels. <strong>Every asset below represents the visual standard I maintain across every platform and marketplace.</strong></div>
+  <div id="imgGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px;">
+    <div class="img-slot" data-slot="0"><img class="img-loaded" src="soybu_images/image_001.png" onclick="replaceImg(this,0)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="1"><img class="img-loaded" src="soybu_images/image_002.png" onclick="replaceImg(this,1)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="2"><img class="img-loaded" src="soybu_images/image_003.png" onclick="replaceImg(this,2)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="3"><img class="img-loaded" src="soybu_images/image_004.png" onclick="replaceImg(this,3)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="4"><img class="img-loaded" src="soybu_images/image_005.png" onclick="replaceImg(this,4)" title="Click to replace"></div>
+    <div class="img-slot" data-slot="5"><img class="img-loaded" src="soybu_images/image_006.png" onclick="replaceImg(this,5)" title="Click to replace"></div>
+  </div>
+</div>
+
+<!-- SLIDE 8: 90-DAY PLAN -->
+<div class="slide">
+  <div class="ey">Execution Roadmap</div>
+  <div class="h1">The First<br><span class="ac">90 Days.</span></div>
+  <div class="narrative">This is not a generic template — it is a specific, sequenced action plan built around the exact gaps identified in Soybu's current digital presence. <strong>Every item is actionable from day one of my start, sequenced to deliver the fastest meaningful revenue impact while building the systems that will compound over time.</strong></div>
+  <div class="three" style="margin-bottom:14px;">
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:20px 18px;position:relative;overflow:hidden;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:4.5rem;color:rgba(255,255,255,0.04);position:absolute;top:6px;right:10px;line-height:1;letter-spacing:0.06em;">30</div>
+      <div class="ey" style="margin-bottom:4px;">Days 1–30</div>
+      <div style="font-weight:800;font-size:0.9rem;color:var(--wh);margin-bottom:12px;">Fix the Foundations</div>
+      <ul class="ul">
+        <li>Email capture pop-up installed with first-purchase offer — list building starts immediately</li>
+        <li>Google Shopping free listing feed connected to Shopify — zero-cost traffic channel activated</li>
+        <li>Full SKU assortment uploaded across all categories — men's line included</li>
+        <li>Instagram and Facebook Shop catalog connected — all posts become shoppable</li>
+        <li>TikTok account created and TikTok Shop setup initiated</li>
+        <li>Amazon A+ content production begins — brand story and product upgrade</li>
+        <li>Walmart Marketplace application submitted</li>
+        <li>AI imagery production begins for hero SKUs — lifestyle and colorway assets</li>
+        <li>Welcome email series written and scheduled</li>
+      </ul>
+    </div>
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:20px 18px;position:relative;overflow:hidden;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:4.5rem;color:rgba(255,255,255,0.04);position:absolute;top:6px;right:10px;line-height:1;letter-spacing:0.06em;">60</div>
+      <div class="ey" style="margin-bottom:4px;">Days 31–60</div>
+      <div style="font-weight:800;font-size:0.9rem;color:var(--wh);margin-bottom:12px;">Launch New Channels</div>
+      <ul class="ul">
+        <li>TikTok Shop live — creator affiliate outreach to 15+ eco and wellness accounts</li>
+        <li>Walmart Marketplace live — full catalog uploaded with optimized content</li>
+        <li>Amazon A+ content live for top 20 SKUs with new lifestyle imagery</li>
+        <li>Blog relaunched with 4 SEO-optimized posts targeting sustainable activewear searches</li>
+        <li>Seasonal email campaign deployed to growing list</li>
+        <li>AI colorway renders complete for next season — ready for buyer presentations</li>
+        <li>Pinterest Shop boards live across all lifestyle categories</li>
+        <li>Faire wholesale marketplace application submitted</li>
+      </ul>
+    </div>
+    <div style="background:var(--s3);border:1px solid var(--bd2);border-radius:12px;padding:20px 18px;position:relative;overflow:hidden;">
+      <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:4.5rem;color:rgba(255,255,255,0.04);position:absolute;top:6px;right:10px;line-height:1;letter-spacing:0.06em;">90</div>
+      <div class="ey" style="margin-bottom:4px;">Days 61–90</div>
+      <div style="font-weight:800;font-size:0.9rem;color:var(--wh);margin-bottom:12px;">Scale &amp; Report</div>
+      <ul class="ul">
+        <li>Full AI imagery workflow operational — all seasonal assets produced at speed</li>
+        <li>Site chatbot live — improving conversion and reducing support burden</li>
+        <li>TikTok Shop LIVE events running on regular schedule with creator partners</li>
+        <li>Target.com pitch prepared and submitted</li>
+        <li>All email automation flows active — welcome, cart recovery, seasonal, post-purchase</li>
+        <li>First performance report: channel revenue, email open rates, social growth, SEO rankings</li>
+        <li>Loyalty rewards program launched on Shopify</li>
+        <li>Next season assortment plan built on sell-through data</li>
+      </ul>
+    </div>
+  </div>
+  <div class="impact-bar">
+    <div class="lbl">The Soybu Advantage in 2026</div>
+    <p>The sustainable activewear market is growing faster than almost any other apparel category — and <strong>Soybu has been doing this since 1998.</strong> The eco credentials, the recycled fibers, the peace-inspired brand identity — these are not trend plays, they are authentic brand truths that the 2026 consumer is actively looking for. The task is simply to make sure Soybu is visible and shoppable everywhere those consumers are looking.</p>
+  </div>
+</div>
+
+<!-- SLIDE 9: ABOUT -->
+<div class="slide">
+  <div class="ey">About the Strategist</div>
+  <div class="h1">Why Cristina<br><span class="ac">Executes This.</span></div>
+  <div class="narrative">This strategy is not theoretical — every recommendation in this deck comes from direct, hands-on experience building and scaling multi-channel e-commerce operations for fashion and accessories brands. <strong>I have done every single thing outlined in this plan, at scale, and I am ready to execute it for Soybu from day one.</strong></div>
+  <div class="stat-row" style="margin-bottom:16px;grid-template-columns:repeat(3,1fr)!important;">
+    <div class="stat"><div class="stat-n">8+</div><div class="stat-d">Years running e-commerce and digital creative for fashion brands</div></div>
+    <div class="stat"><div class="stat-n">12+</div><div class="stat-d">Marketplace and sales channels launched from zero</div></div>
+    <div class="stat"><div class="stat-n">10×</div><div class="stat-d">Listing production speed increase via AI workflows I built</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:16px;">
+    <div>
+      <div class="card ac" style="margin-bottom:12px;">
+        <div class="lbl">Professional Background</div>
+        <ul class="ul">
+          <li><strong>Magid Inc. (2020–Present):</strong> Built the entire e-commerce department from zero for a traditional wholesale accessories company. Launched 12+ channels including Amazon, Walmart, TikTok Shop, AAFES, Nordstrom, Saks Off Fifth, Ulta, and Staples. Managing 8–10 brands simultaneously across 500+ live SKUs.</li>
+          <li><strong>Area Stars (2022–Present):</strong> Freelance e-commerce and creative director — Shopify management, AI visual workflow development, marketplace strategy for a sustainable apparel brand.</li>
+          <li><strong>Mystique Boutique (2017–2020):</strong> Built full Shopify operation from scratch including product photography, SEO, fulfillment, and inventory management.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="lbl">Technical Skills</div>
+        <ul class="ul">
+          <li><strong>Platforms:</strong> Shopify, Amazon Seller &amp; Vendor Central, Walmart Marketplace, TikTok Shop, Meta Commerce, Pinterest Shop</li>
+          <li><strong>Integrations:</strong> EDI, CommerceHub/Disco, Rithum, Mirakl, Shopify Marketplace Connect, custom API builds</li>
+          <li><strong>Creative:</strong> Adobe Photoshop, Illustrator, Lightroom, Premiere — mastery level</li>
+          <li><strong>AI Tools:</strong> Adobe Firefly, Midjourney, generative workflows for product and lifestyle imagery</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="lbl">Education</div>
+        <ul class="ul">
+          <li><strong>BFA, Photography &amp; Related Media</strong> — Fashion Institute of Technology, New York</li>
+          <li><strong>AAS</strong> — Fashion Institute of Technology, New York</li>
+          <li>Commercial photography background informs every creative production decision</li>
+        </ul>
+      </div>
+      <div class="card ac">
+        <div class="lbl">What I Bring to Soybu Specifically</div>
+        <ul class="ul">
+          <li>I have built sustainable brand digital presences — I understand the eco-conscious consumer and what content resonates with them</li>
+          <li>My AI imagery workflow eliminates the need for expensive quarterly shoots — directly reducing creative production costs from day one</li>
+          <li>I have run TikTok Shop operations hands-on — I know the platform, the creator affiliate model, and how to drive sales through it</li>
+          <li>Trilingual (English, Portuguese, Spanish) — supports any international expansion goals</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:12px;border-color:rgba(143,188,143,0.3);text-align:center;padding:20px;">
+        <div class="lbl" style="text-align:center;margin-bottom:12px;">Contact</div>
+        <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--wh);margin-bottom:6px;">CRISTINA MIRAO</div>
+        <div style="font-size:0.82rem;color:var(--mu);line-height:1.8;">📞 (516) 503-1573<br>✉️ cristinadmirao@gmail.com<br>💼 linkedin.com/in/cristina-d-mirao</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- stage -->
+
+<div class="bottombar">
+  <button class="nav-btn" id="prevBtn" onclick="prev()" disabled="">← Previous</button>
+  <div class="dots" id="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+  <button class="nav-btn primary" id="nextBtn" onclick="next()">Next →</button>
+</div>
+
+<script>
+const LABELS=['Cover','Executive Summary','Customer Profile','Full Audit','Marketplace Strategy','AI & Creative','SEO & Content','Social Commerce','Brand Imagery','90-Day Plan','About Cristina'];
+const PILLS=['Cover','Summary','Profile','Audit','Channels','AI','SEO','Social','Gallery','90 Days','About'];
+let cur=0;
+const total=LABELS.length;
+
+const pillRow=document.getElementById('pills');
+const dotRow=document.getElementById('dots');
+PILLS.forEach((p,i)=>{
+  const b=document.createElement('button');
+  b.className='pill'+(i===0?' active':'');
+  b.textContent=p;b.onclick=()=>goTo(i);pillRow.appendChild(b);
+  const d=document.createElement('div');
+  d.className='dot'+(i===0?' active':'');
+  d.onclick=()=>goTo(i);dotRow.appendChild(d);
+});
+document.getElementById('tot').textContent=total;
+
+function loadImg(input, slot) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const container = input.closest('.img-slot');
+    container.innerHTML = `<img class="img-loaded" src="${e.target.result}" onclick="replaceImg(this,${slot})" title="Click to replace">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function replaceImg(img, slot) {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.onchange = function() {
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) { img.src = e.target.result; };
+    reader.readAsDataURL(file);
+  };
+  input.click();
+}
+
+function goTo(n){
+  document.querySelectorAll('.slide')[cur].classList.remove('active');
+  document.querySelectorAll('.pill')[cur].classList.remove('active');
+  document.querySelectorAll('.dot')[cur].classList.remove('active');
+  cur=Math.max(0,Math.min(total-1,n));
+  document.querySelectorAll('.slide')[cur].classList.add('active');
+  document.querySelectorAll('.pill')[cur].classList.add('active');
+  document.querySelectorAll('.dot')[cur].classList.add('active');
+  document.querySelectorAll('.slide')[cur].scrollTop=0;
+  document.getElementById('cur').textContent=cur+1;
+  document.getElementById('prevBtn').disabled=cur===0;
+  const nb=document.getElementById('nextBtn');
+  nb.disabled=cur===total-1;
+  nb.textContent=cur===total-2?'Finish →':'Next →';
+}
+function next(){goTo(cur+1);}function prev(){goTo(cur-1);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')next();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')prev();
+});
+</script>
+
+
+</body></html>
